@@ -6,43 +6,140 @@
 <title>Title</title>
 <meta name="description" content="desc" />
 
-<style>div#outer_container {
-  font-family: Arial, Helvetica, sans-serif;
+<style>:root {
+  --table-gray: rgb(245, 245, 245);
+  --table-white: rgb(255, 255, 255);
+  --table-hover: rgb(255, 253, 190);
+  --table-border-width: 2px;
+  --table-text-colour: rgb(0, 0, 0);
+  --font-very-large: 2.5rem;
+  --font-large: 1.5rem;
+  --font-regular: 1.2rem;
+  --font-small: 1rem;
+  --font-very-small: 0.8rem;
+}
 
+div#outer_container {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: var(--font-regular);
+  color: #3c3c3c;
 }
 
 .observablehq {
   margin-bottom: 10px;
 }
 
+label {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+/* Controls */
+
+#controls {
+  border: 1px solid #e7e7e7;
+  background-color: var(--table-gray);
+  padding: 10px;
+  color: #3c3c3c;
+  margin-bottom: 10px;
+}
+
+#controls input,
+select,
+label {
+  display: inline-block;
+  font-size: var(--font-small);
+  margin-bottom: 0px;
+  color: #3c3c3c;
+}
+
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+  color: #3c3c3c;
+}
+
+#observablehq-corresponding_probability {
+  font-size: var(--font-small);
+}
+/* Table */
 .observablehq table {
-  border: solid 1px #747474;
+  display: block;
   border-collapse: collapse;
   border-spacing: 0;
-  font: normal 10px Arial, sans-serif;
-}
-.observablehq table thead th {
-  background-color: #747474;
-  border: solid 1px #747474;
-  color: #ffffff;
+  border: none;
+  color: var(--table-text-colour);
+  font-size: var(--font-very-small);
 
-  padding: 5px;
-  text-align: left;
-
-  font: normal 10px Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 500px;
+  overflow: auto;
 }
-.observablehq table tbody td {
-  border: solid 1px #747474;
-  color: #333;
-  padding: 5px;
-  text-shadow: 1px 1px 1px #fff;
-  font: normal 10px Arial, sans-serif;
+
+.observablehq thead {
+  border-bottom: var(--table-border-width) solid var(--table-gray);
+  vertical-align: bottom;
+}
+
+.observablehq td,
+.observablehq th,
+.observablehq tr {
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+
+.observablehq th {
+  font-weight: bold;
+}
+
+.observablehq tbody tr:nth-child(odd) {
+  background: var(--table-white);
+}
+
+.observablehq tbody tr:nth-child(even) {
+  background: var(--table-gray);
+}
+
+.observablehq tbody tr:hover {
+  background: var(--table-hover);
+}
+
+.observablehq table {
+  margin-bottom: 1em;
+}
+
+/* Headers */
+
+h2 {
+  margin-bottom: 5px;
+  font-size: var(--font-very-large);
+  color: black;
+}
+h3 {
+  margin-bottom: 5px;
+  font-size: var(--font-large);
+  color: black;
 }
 </style>
 
-<style></style>
-<style></style>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -5776,7 +5873,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 
 	const rowHeight = 22;
 
-	function table(data, options = {}) {
+	function table$1(data, options = {}) {
 	  const {
 	    rows = 11.5, // maximum number of rows to show
 	    height,
@@ -6151,7 +6248,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  return Array.from(columns);
 	}
 
-	// https://observablehq.com/@robinl/to-embed-in-splink-outputs@649
+	// https://observablehq.com/@robinl/to-embed-in-splink-outputs@1151
 	function define(runtime, observer) {
 	  const main = runtime.module();
 	  main.variable(observer()).define(["md"], function(md){return(
@@ -6159,10 +6256,54 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	)});
 	  main.variable(observer("viewof selected_cluster_id")).define("viewof selected_cluster_id", ["splink_vis_utils","cluster_unique_ids"], function(splink_vis_utils,cluster_unique_ids){return(
 	splink_vis_utils.select(cluster_unique_ids, {
-	  label: "Choose cluster"
+	  label: "Choose cluster: "
 	})
 	)});
 	  main.variable(observer("selected_cluster_id")).define("selected_cluster_id", ["Generators", "viewof selected_cluster_id"], (G, _) => G.input(_));
+	  main.variable(observer("viewof edge_colour_metric")).define("viewof edge_colour_metric", ["splink_vis_utils","raw_edges_data"], function(splink_vis_utils,raw_edges_data)
+	{
+	  const node_size_options = splink_vis_utils.detect_edge_metrics(
+	    raw_edges_data
+	  );
+
+	  let v = splink_vis_utils.select(node_size_options, {
+	    label: "Choose metric for edge colour: "
+	  });
+	  if (node_size_options.length == 1) {
+	    v.style.visibility = "hidden";
+	  }
+	  return v;
+	}
+	);
+	  main.variable(observer("edge_colour_metric")).define("edge_colour_metric", ["Generators", "viewof edge_colour_metric"], (G, _) => G.input(_));
+	  main.variable(observer("viewof node_size_metric")).define("viewof node_size_metric", ["splink_vis_utils","raw_nodes_data"], function(splink_vis_utils,raw_nodes_data)
+	{
+	  const node_size_options = splink_vis_utils.detect_node_metrics(
+	    raw_nodes_data
+	  );
+	  let v = splink_vis_utils.select(node_size_options, {
+	    label: "Choose metric for node size: "
+	  });
+	  if (node_size_options.length == 1) {
+	    v.style.visibility = "hidden";
+	  }
+	  return v;
+	}
+	);
+	  main.variable(observer("node_size_metric")).define("node_size_metric", ["Generators", "viewof node_size_metric"], (G, _) => G.input(_));
+	  main.variable(observer("viewof show_edge_comparison_type")).define("viewof show_edge_comparison_type", ["splink_vis_utils"], function(splink_vis_utils){return(
+	splink_vis_utils.checkbox(
+	  new Map([
+	    ["Show raw edge data on edge click", "raw_edge_data"],
+	    ["Show comparison columns on edge click", "cc_data"]
+	  ]),
+	  {
+	    label: "",
+	    value: ["raw_edge_data"]
+	  }
+	)
+	)});
+	  main.variable(observer("show_edge_comparison_type")).define("show_edge_comparison_type", ["Generators", "viewof show_edge_comparison_type"], (G, _) => G.input(_));
 	  main.variable(observer("viewof show_full_tables")).define("viewof show_full_tables", ["splink_vis_utils"], function(splink_vis_utils){return(
 	splink_vis_utils.checkbox(
 	  new Map([
@@ -6188,6 +6329,15 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
   .log2_bayes_factor_to_prob(score_threshold_filter)
   .toPrecision(4)}`
 	)});
+	  main.variable(observer("viewof additional_graph_controls")).define("viewof additional_graph_controls", ["splink_vis_utils"], function(splink_vis_utils){return(
+	splink_vis_utils.checkbox(
+	  new Map([["Show additional graph controls", "graph_controls"]]),
+	  {
+	    label: ""
+	  }
+	)
+	)});
+	  main.variable(observer("additional_graph_controls")).define("additional_graph_controls", ["Generators", "viewof additional_graph_controls"], (G, _) => G.input(_));
 	  main.variable(observer("nothing_selected_message")).define("nothing_selected_message", ["no_edge_selected","no_node_selected","html","selected_edge"], function(no_edge_selected,no_node_selected,html,selected_edge)
 	{
 	  if (no_edge_selected && no_node_selected) {
@@ -6205,20 +6355,48 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	vegaEmbed(splink_vis_utils.cloneDeep(spec))
 	)});
 	  main.variable(observer("force_directed_chart")).define("force_directed_chart", ["Generators", "viewof force_directed_chart"], (G, _) => G.input(_));
-	  main.variable(observer("edge_table_header")).define("edge_table_header", ["no_edge_selected","html"], function(no_edge_selected,html)
+	  main.variable(observer("viewof refresh")).define("viewof refresh", ["Inputs"], function(Inputs){return(
+	Inputs.button("refresh splink_vis_utils javascript lib")
+	)});
+	  main.variable(observer("refresh")).define("refresh", ["Generators", "viewof refresh"], (G, _) => G.input(_));
+	  main.variable(observer("edge_table_header")).define("edge_table_header", ["no_edge_selected","html","show_edge_comparison_type"], function(no_edge_selected,html,show_edge_comparison_type)
 	{
 	  if (no_edge_selected) {
 	    return html``;
 	  }
-	  return html`<h3>Rows compared by selected edge</h3>`;
+	  if (show_edge_comparison_type.includes("raw_edge_data")) {
+	    return html`<h3>Rows compared by selected edge</h3>`;
+	  }
+
+	  if (show_edge_comparison_type.includes("cc_data")) {
+	    return html`<h3>Rows compared by selected edge</h3>`;
+	  }
+
+	  return html``;
 	}
 	);
-	  main.variable(observer("edge_table")).define("edge_table", ["no_edge_selected","html","splink_vis_utils","selected_edge","ss"], function(no_edge_selected,html,splink_vis_utils,selected_edge,ss)
+	  main.variable(observer("edge_table")).define("edge_table", ["no_edge_selected","html","show_edge_comparison_type","splink_vis_utils","selected_edge","ss"], function(no_edge_selected,html,show_edge_comparison_type,splink_vis_utils,selected_edge,ss)
 	{
 	  if (no_edge_selected) {
 	    return html``;
 	  }
-	  return splink_vis_utils.edge_row_to_table(selected_edge, ss);
+
+	  if (show_edge_comparison_type.includes("raw_edge_data")) {
+	    return splink_vis_utils.edge_row_to_table(selected_edge, ss);
+	  }
+
+	  return html``;
+	}
+	);
+	  main.variable(observer("comparison_columns_table")).define("comparison_columns_table", ["no_edge_selected","html","show_edge_comparison_type","splink_vis_utils","selected_edge","ss"], function(no_edge_selected,html,show_edge_comparison_type,splink_vis_utils,selected_edge,ss)
+	{
+	  if (no_edge_selected) {
+	    return html``;
+	  }
+	  if (show_edge_comparison_type.includes("cc_data")) {
+	    return splink_vis_utils.comparison_column_table(selected_edge, ss);
+	  }
+	  return html``;
 	}
 	);
 	  main.variable(observer("waterfall_chart")).define("waterfall_chart", ["no_edge_selected","html","splink_vis_utils","selected_edge","ss","vegaEmbed"], function(no_edge_selected,html,splink_vis_utils,selected_edge,ss,vegaEmbed)
@@ -6242,7 +6420,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  if (no_node_selected) {
 	    return html``;
 	  }
-	  return html`<h3>Table of selected node</h3>`;
+	  return html`<h3>Selected node</h3>`;
 	}
 	);
 	  main.variable(observer("node_table")).define("node_table", ["no_node_selected","html","splink_vis_utils","selected_node"], function(no_node_selected,html,splink_vis_utils,selected_node)
@@ -6260,7 +6438,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    //   d => d[svu_options.cluster_colname + "_l"] == selected_cluster_id
 	    // );
 	    return html`
-    <h3>Table of edges corresponding to selected cluster, filtered by threshold</h3>
+    <h3>Edges corresponding to selected cluster, filtered by threshold</h3>
     Click column headers to sort
     
     ${splink_vis_utils.table(filtered_edges, { layout: "auto" })}
@@ -6279,7 +6457,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    );
 
 	    return html`
-    <h3>Table of all nodes corresponding to selected cluster</h3>
+    <h3>All nodes corresponding to selected cluster</h3>
     Click column headers to sort
     
     ${splink_vis_utils.table(filtered_nodes, { layout: "auto" })}
@@ -6293,7 +6471,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  main.variable(observer()).define(["md"], function(md){return(
 	md`## Outputs`
 	)});
-	  main.variable(observer("spec")).define("spec", ["splink_vis_utils","filtered_nodes","ss","filtered_edges","svu_options"], function(splink_vis_utils,filtered_nodes,ss,filtered_edges,svu_options)
+	  main.variable(observer("spec")).define("spec", ["splink_vis_utils","filtered_nodes","ss","filtered_edges","edge_colour_metric","node_size_metric","additional_graph_controls"], function(splink_vis_utils,filtered_nodes,ss,filtered_edges,edge_colour_metric,node_size_metric,additional_graph_controls)
 	{
 	  let formatted_nodes = splink_vis_utils.format_nodes_data_for_force_directed(
 	    filtered_nodes,
@@ -6309,12 +6487,21 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    formatted_edges
 	  );
 
-	  s.set_edge_colour_metric(svu_options.prob_colname, false, "redyellowgreen", [
-	    0,
-	    1
-	  ]);
+	  let edge_colour_args =
+	    splink_vis_utils.metric_vis_args["edge_colour"][edge_colour_metric];
 
-	  s.remove_all_sliders();
+	  s.set_edge_colour_metric(...Object.values(edge_colour_args));
+
+	  if (node_size_metric != "none") {
+	    let node_size_args =
+	      splink_vis_utils.metric_vis_args["node_size"][node_size_metric];
+	    s.set_node_area_metric(...Object.values(node_size_args));
+	  }
+
+	  s.set_height_from_nodes_data();
+	  if (additional_graph_controls.length == 0) {
+	    s.remove_all_sliders();
+	  }
 
 	  return s.spec;
 	}
@@ -6331,10 +6518,10 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  main.variable(observer()).define(["md"], function(md){return(
 	md`## Data processing`
 	)});
-	  main.variable(observer("cluster_unique_ids")).define("cluster_unique_ids", ["splink_vis_utils","raw_nodes_data"], function(splink_vis_utils,raw_nodes_data){return(
+	  main.variable(observer("cluster_unique_ids")).define("cluster_unique_ids", ["splink_vis_utils","raw_nodes_data","svu_options"], function(splink_vis_utils,raw_nodes_data,svu_options){return(
 	splink_vis_utils.get_unique_cluster_ids_from_nodes_data(
 	  raw_nodes_data,
-	  'cluster_medium'
+	  svu_options.cluster_colname
 	)
 	)});
 	  main.variable(observer("selected_node")).define("selected_node", ["observe_chart_data","force_directed_chart"], function(observe_chart_data,force_directed_chart){return(
@@ -6342,32 +6529,6 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	)});
 	  main.variable(observer("selected_edge")).define("selected_edge", ["observe_chart_data","force_directed_chart"], function(observe_chart_data,force_directed_chart){return(
 	observe_chart_data(force_directed_chart, "edge_click")
-	)});
-	  main.variable(observer("sel_edge")).define("sel_edge", function(){return(
-	{
-	  tf_adjusted_match_prob: 0.9999017555,
-	  match_probability: 0.994335954,
-	  source_dataset_l: "df_2",
-	  unique_id_l: 249,
-	  source_dataset_r: "df_2",
-	  unique_id_r: 250,
-	  first_name_l: "Freddi ",
-	  first_name_r: null,
-	  gamma_first_name: -1,
-	  surname_l: "Lewis",
-	  surname_r: "Lewis",
-	  gamma_surname: 2,
-	  dob_l: "1971-12-19",
-	  dob_r: "1971-12-19",
-	  gamma_dob: 1,
-	  email_l: "tyler28@wecveralvarez.aom",
-	  email_r: "tyler28@weaver-alvarez.com",
-	  gamma_email: 0,
-	  group_l: 63,
-	  group_r: 63,
-	  cluster_medium_l: 3,
-	  cluster_medium_r: 3
-	}
 	)});
 	  main.variable(observer("observe_chart_data")).define("observe_chart_data", ["Generators"], function(Generators){return(
 	function observe_chart_data(chart, signal_name) {
@@ -6440,8 +6601,8 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  let key = gamma_key;
 	  let gamma_value = row[key];
 	  let col_name = key.replace("gamma_", "");
-	  let cc_lookup = splink_settings.comparison_column_lookup();
-	  let this_cc = cc_lookup[col_name];
+
+	  let this_cc = splink_settings.get_col_by_name(col_name);
 
 	  let value_l = row[col_name + "_l"];
 	  let value_r = row[col_name + "_r"];
@@ -6451,8 +6612,8 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    u_probability = 0.5;
 	    m_probability = 0.5;
 	  } else {
-	    u_probability = this_cc["u_probabilities"][gamma_value];
-	    m_probability = this_cc["m_probabilities"][gamma_value];
+	    u_probability = this_cc.u_probabilities[gamma_value];
+	    m_probability = this_cc.m_probabilities[gamma_value];
 
 	    if (value_l == value_r) {
 	      if (col_name in term_freqs) {
@@ -6496,7 +6657,9 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 
 	function get_waterfall_data_lambda_row(splink_settings) {
 	  let row = {
-	    bayes_factor: prob_to_bayes_factor(splink_settings.proportion_of_matches),
+	    bayes_factor: prob_to_bayes_factor(
+	      splink_settings.settings_dict.proportion_of_matches
+	    ),
 	    column_name: "Prior",
 	    gamma_column_name: "",
 	    gamma_index: "",
@@ -6504,7 +6667,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    level_name: null,
 
 	    log2_bayes_factor: prob_to_log2_bayes_factor(
-	      splink_settings.proportion_of_matches
+	      splink_settings.settings_dict.proportion_of_matches
 	    ),
 	    m_probability: null,
 
@@ -6517,7 +6680,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  return row;
 	}
 
-	function get_waterfall_data_final_row(splink_settings) {
+	function get_waterfall_data_final_row() {
 	  let row = {
 	    bayes_factor: null,
 	    column_name: "Final score",
@@ -6589,6 +6752,36 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 			}
 		},
 		{
+			name: "nodeCollideStrength",
+			value: 1,
+			bind: {
+				input: "range",
+				min: 0.2,
+				max: 4,
+				step: 0.1
+			}
+		},
+		{
+			name: "nodeCollideRadius",
+			value: 1,
+			bind: {
+				input: "range",
+				min: 0.2,
+				max: 4,
+				step: 0.1
+			}
+		},
+		{
+			name: "linkStrength",
+			value: 0.2,
+			bind: {
+				input: "range",
+				min: 0,
+				max: 1,
+				step: 0.01
+			}
+		},
+		{
 			name: "edge_click",
 			on: [
 				{
@@ -6610,19 +6803,19 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 			value: -3,
 			bind: {
 				input: "range",
-				min: -100,
-				max: 100,
+				min: -500,
+				max: 500,
 				step: 1
 			}
 		},
 		{
 			name: "linkDistance",
-			value: 0.5,
+			value: 1,
 			bind: {
 				input: "range",
 				min: 0.1,
-				max: 1,
-				step: 0.01
+				max: 2,
+				step: 0.1
 			}
 		},
 		{
@@ -6749,7 +6942,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 						value: "black"
 					},
 					tooltip: {
-						signal: "datum"
+						signal: "datum.tooltip"
 					}
 				},
 				update: {
@@ -6792,7 +6985,10 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 						{
 							force: "collide",
 							radius: {
-								expr: "pow(1000*nodeRadius,0.5)"
+								expr: "pow(1000*nodeRadius,0.5)*nodeCollideStrength*nodeCollideRadius"
+							},
+							strength: {
+								signal: "nodeCollideStrength"
 							}
 						},
 						{
@@ -6808,7 +7004,10 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 							distance: {
 								expr: "200*linkDistance"
 							},
-							id: "datum.__node_id"
+							id: "datum.__node_id",
+							strength: {
+								signal: "linkStrength"
+							}
 						}
 					]
 				}
@@ -6828,7 +7027,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 						value: "black"
 					},
 					tooltip: {
-						signal: "datum"
+						signal: "datum.tooltip"
 					},
 					strokeWidth: {
 						value: 2
@@ -6927,6 +7126,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    this.spec = base_spec_cp;
 	    this.set_force_directed_node_data(nodes_data);
 	    this.set_force_directed_edge_data(links_data);
+	    this.nodes_data = nodes_data;
 	  }
 
 	  set_force_directed_node_data(data) {
@@ -6942,19 +7142,23 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  set_edge_colour_metric(
 	    edge_metric_name,
 	    reverse = false,
-	    scheme = "redyellowgreen",
-	    explicit_domain = null
+	    domain = null,
+	    range = null
 	  ) {
+	    if (domain == null) {
+	      domain = { data: "link-data", field: edge_metric_name };
+	    }
+
+	    if (range == null) {
+	      range = { scheme: "redyellowgreen" };
+	    }
 	    const new_link_scale = {
 	      name: "link_colour",
 	      type: "linear",
-	      domain: { data: "link-data", field: edge_metric_name },
-	      range: { scheme: scheme },
+	      domain: domain,
+	      range: range,
 	      reverse: reverse,
 	    };
-	    if (explicit_domain != null) {
-	      new_link_scale.domain = explicit_domain;
-	    }
 
 	    replace_in_list_or_push(
 	      this.spec.scales,
@@ -7029,29 +7233,42 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    replace_in_list_or_push(force_transform.forces, "force", "link", new_force);
 	  }
 
-	  set_node_radius_metric(node_metric_name, reverse = false) {
-	    const new_node_radius_scale = {
-	      name: "node_radius_scale",
+	  set_node_area_metric(
+	    node_metric_name,
+	    reverse = false,
+	    domain = null,
+	    range = null
+	  ) {
+	    if (domain == null) {
+	      domain = { data: "node-data", field: node_metric_name };
+	    }
+
+	    if (range == null) {
+	      range = [400, 2000];
+	    }
+
+	    const new_node_area_scale = {
+	      name: "node_area_scale",
 	      type: "linear",
 	      nice: false,
 	      reverse: reverse,
-	      domain: { data: "node-data", field: node_metric_name },
-	      range: [400, 2000],
+	      domain: domain,
+	      range: range,
 	    };
 
 	    replace_in_list_or_push(
 	      this.spec.scales,
 	      "name",
-	      "node_radius_scale",
-	      new_node_radius_scale
+	      "node_area_scale",
+	      new_node_area_scale
 	    );
 
 	    let node_mark = find_obj_in_list(this.spec.marks, "name", "nodes");
 
 	    node_mark.encode.update.size = {
-	      scale: "node_radius_scale",
+	      scale: "node_area_scale",
 	      field: node_metric_name,
-	      mult: { signal: "nodeRadius" },
+	      mult: { signal: "nodeArea" },
 	    };
 
 	    let force_transform = find_obj_in_list(
@@ -7064,7 +7281,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	      "force",
 	      "collide"
 	    );
-	    force_collide.radius.expr = `pow(scale('node_radius_scale',datum.datum.${node_metric_name})*nodeRadius,0.5)`;
+	    force_collide.radius.expr = `pow(scale('node_area_scale',datum.datum.${node_metric_name})*nodeArea,0.5)`;
 	  }
 
 	  set_node_colour_metric(
@@ -7096,6 +7313,24 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	    };
 	  }
 
+	  set_height_from_nodes_data() {
+	    const min_height = 200;
+	    const node_height = 150;
+	    const num_nodes = this.nodes_data.length;
+	    const sqrt_nodes = Math.sqrt(num_nodes);
+	    let height = sqrt_nodes * node_height;
+	    height = height + 20;
+	    height = Math.max(min_height, height);
+
+	    let height_signal = find_obj_in_list(
+	      this.spec.signals,
+	      "name",
+	      "vis_height"
+	    );
+
+	    height_signal.value = height;
+	  }
+
 	  remove_all_sliders() {
 	    this.spec.signals.forEach((signal) => {
 	      delete signal.bind;
@@ -7103,47 +7338,198 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  }
 	}
 
+	class ComparisonColumn {
+	  constructor(cc) {
+	    this.original_dict = cc;
+	  }
+
+	  get name() {
+	    if (this.is_custom_column) {
+	      return this.original_dict["custom_name"];
+	    } else {
+	      return this.original_dict["col_name"];
+	    }
+	  }
+
+	  get is_custom_column() {
+	    return "custom_name" in this.original_dict;
+	  }
+
+	  get columns_used() {
+	    if (this.is_custom_column) {
+	      return this.original_dict.custom_columns_used;
+	    } else {
+	      return [this.original_dict.col_name];
+	    }
+	  }
+
+	  get column_case_expression_lookup() {
+	    let expr = this.original_dict["case_expression"];
+	    let parsed = parse_case_expression(expr);
+	    let fmt = format_parsed_expression(parsed);
+	    if (!("0" in fmt)) {
+	      fmt["0"] = "else 0";
+	    }
+	    return fmt;
+	  }
+
+	  get_case_expression_for_level(level) {
+	    return this.column_case_expression_lookup[level];
+	  }
+
+	  get m_probabilities() {
+	    return this.original_dict["m_probabilities"];
+	  }
+
+	  get u_probabilities() {
+	    return this.original_dict["u_probabilities"];
+	  }
+
+	  data_from_row(edge_row_as_dict) {
+	    let data = {
+	      left: [],
+	      right: [],
+	    };
+	    this.columns_used.forEach((col) => {
+	      let left_data = {
+	        col_name: col,
+	        col_value: edge_row_as_dict[`${col}_l`],
+	      };
+	      let right_data = {
+	        col_name: col,
+	        col_value: edge_row_as_dict[`${col}_r`],
+	      };
+	      data["left"].push(left_data);
+	      data["right"].push(right_data);
+	    });
+	    return data;
+	  }
+
+	  concat_data_from_row(edge_row_as_dict) {
+	    let left_right_data = this.data_from_row(edge_row_as_dict);
+
+	    let left_data = left_right_data["left"];
+	    let right_data = left_right_data["right"];
+
+	    left_data = left_data.map((d) => d.col_value);
+	    left_data = left_data.filter((d) => d != null);
+	    left_data = left_data.join(" | ");
+
+	    right_data = right_data.map((d) => d.col_value);
+	    right_data = right_data.filter((d) => d != null);
+	    right_data = right_data.join(" | ");
+
+	    return {
+	      left: left_data,
+	      right: right_data,
+	    };
+	  }
+
+	  level_from_row(edge_row_as_dict) {
+	    let key = "gamma_" + this.name;
+	    return edge_row_as_dict[key];
+	  }
+
+	  case_expression_from_row(edge_row_as_dict) {
+	    let lev = this.level_from_row(edge_row_as_dict);
+	    return this.get_case_expression_for_level(lev);
+	  }
+	}
+
 	class SplinkSettings {
 	  constructor(settings_json) {
 	    const s = JSON.parse(settings_json);
-	    Object.assign(this, s);
+	    this.settings_dict = s;
 	  }
 
-	  comparison_column_lookup() {
+	  get comparison_columns() {
+	    let ccs = this.settings_dict["comparison_columns"];
+	    return ccs.map((d) => {
+	      return new ComparisonColumn(d);
+	    });
+	  }
+
+	  get comparison_column_lookup() {
 	    let lookup = {};
 
-	    this.comparison_columns.forEach((d) => {
-	      let col_name;
-	      if ("custom_name" in d) {
-	        col_name = d["custom_name"];
-	      } else {
-	        col_name = d["col_name"];
-	      }
-	      lookup[col_name] = d;
+	    this.comparison_columns.forEach((cc) => {
+	      lookup[cc.name] = cc;
 	    });
 
 	    return lookup;
 	  }
 
-	  cols_used_by_model() {
+	  get cols_used_by_model() {
 	    const ccs = this.comparison_columns;
 	    let cols_in_use = [];
 	    ccs.forEach((cc) => {
-	      if ("custom_name" in cc) {
-	        cc["custom_columns_used"].forEach((col) => {
-	          if (!cols_in_use.includes(col)) {
-	            cols_in_use.push(col);
-	          }
-	        });
-	      } else {
-	        if (!cols_in_use.includes(cc["col_name"])) {
-	          cols_in_use.push(cc["col_name"]);
+	      cc.columns_used.forEach((used_col) => {
+	        if (cols_in_use.indexOf(used_col) == -1) {
+	          cols_in_use.push(used_col);
 	        }
+	      });
+	    });
+	    return cols_in_use;
+	  }
+
+	  get cols_used_by_model_inc_add_to_retain() {
+	    let all_cols = [];
+	    if (this.settings_dict.link_type == "dedupe_only") {
+	      all_cols.push(this.settings_dict.unique_id_column_name);
+	    } else {
+	      all_cols.push(this.settings_dict.unique_id_column_name);
+	      all_cols.push(this.settings_dict.source_dataset_column_name);
+	    }
+
+	    let ccs = this.cols_used_by_model;
+	    all_cols.push(...ccs);
+
+	    if ("additional_columns_to_retain" in this.settings_dict) {
+	      all_cols.push(...this.settings_dict["additional_columns_to_retain"]);
+	    }
+
+	    let cols_in_order_deduped = [];
+	    all_cols.forEach((col) => {
+	      if (cols_in_order_deduped.indexOf(col) == -1) {
+	        cols_in_order_deduped.push(col);
 	      }
 	    });
 
-	    return cols_in_use;
+	    return cols_in_order_deduped;
 	  }
+
+	  get_col_by_name(col_name) {
+	    return this.comparison_column_lookup[col_name];
+	  }
+	}
+
+	function parse_case_expression(case_expr) {
+	  const case_regex = /when[\s\S]+?then[\s\S]+?(\-?[012345678])/gi;
+	  let matches = case_expr.matchAll(case_regex);
+	  matches = [...matches];
+
+	  let results = {};
+	  matches.forEach((d) => {
+	    const key = d[1];
+
+	    if (key in results) {
+	      results[key].push(d[0]);
+	    } else {
+	      results[key] = [d[0]];
+	    }
+	  });
+
+	  return results;
+	}
+
+	function format_parsed_expression(parsed_case_expression) {
+	  let formatted_expressions = {};
+
+	  Object.entries(parsed_case_expression).forEach((k) => {
+	    formatted_expressions[k[0]] = k[1].join("\n");
+	  });
+
+	  return formatted_expressions;
 	}
 
 	function format_nodes_data_for_force_directed(
@@ -7151,43 +7537,67 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  splink_settings
 	) {
 	  // Create a __node_id field that uniquely identifies the row
-
-	  if (splink_settings.link_type == "dedupe_only") {
-	    let c = splink_settings.unique_id_column_name;
+	  if (splink_settings.settings_dict.link_type == "dedupe_only") {
+	    let c = splink_settings.settings_dict.unique_id_column_name;
 	    nodes_data.forEach(function (node) {
 	      node.__node_id = node[c];
 	    });
 	  } else {
-	    let c = splink_settings.unique_id_column_name;
-	    let sds = splink_settings.source_dataset_column_name;
+	    let c = splink_settings.settings_dict.unique_id_column_name;
+	    let sds = splink_settings.settings_dict.source_dataset_column_name;
 	    nodes_data.forEach(function (node) {
 	      node.__node_id = node[sds] + "-__-" + node[c];
 	    });
 	  }
 
+	  // Create a tooltip field that contains only the info used by the model
+	  let cols_for_tooltip = splink_settings.cols_used_by_model_inc_add_to_retain;
+
+	  nodes_data.forEach(function (node) {
+	    let tooltip = {};
+	    cols_for_tooltip.forEach(function (col) {
+	      tooltip[col] = node[col];
+	    });
+	    node.tooltip = tooltip;
+	  });
+
 	  return nodes_data;
 	}
 
 	function format_edges_data_for_force_directed(
-	  nodes_data,
+	  edge_data,
 	  splink_settings
 	) {
-	  if (splink_settings.link_type == "dedupe_only") {
-	    let c = splink_settings.unique_id_column_name;
-	    nodes_data.forEach(function (node) {
-	      node.source = node[`${c}_l`];
-	      node.target = node[`${c}_r`];
+	  if (splink_settings.settings_dict.link_type == "dedupe_only") {
+	    let c = splink_settings.settings_dict.unique_id_column_name;
+	    edge_data.forEach(function (edge) {
+	      edge.source = edge[`${c}_l`];
+	      edge.target = edge[`${c}_r`];
 	    });
 	  } else {
-	    let c = splink_settings.unique_id_column_name;
-	    let sds = splink_settings.source_dataset_column_name;
-	    nodes_data.forEach(function (node) {
-	      node.source = node[`${sds}_l`] + "-__-" + node[`${c}_l`];
-	      node.target = node[`${sds}_r`] + "-__-" + node[`${c}_r`];
+	    let c = splink_settings.settings_dict.unique_id_column_name;
+	    let sds = splink_settings.settings_dict.source_dataset_column_name;
+	    edge_data.forEach(function (edge) {
+	      edge.source = edge[`${sds}_l`] + "-__-" + edge[`${c}_l`];
+	      edge.target = edge[`${sds}_r`] + "-__-" + edge[`${c}_r`];
 	    });
 	  }
 
-	  return nodes_data;
+	  // Create a tooltip field that contains only the info used by the model
+	  let cols_for_tooltip = splink_settings.cols_used_by_model_inc_add_to_retain;
+
+	  edge_data.forEach(function (edge) {
+	    let tooltip = {};
+	    cols_for_tooltip.forEach(function (col) {
+	      if (edge[`${col}_l`] && edge[`${col}_r`]) {
+	        tooltip[`${col}_l`] = edge[`${col}_l`];
+	        tooltip[`${col}_r`] = edge[`${col}_r`];
+	      }
+	    });
+	    edge.tooltip = tooltip;
+	  });
+
+	  return edge_data;
 	}
 
 	function get_unique_cluster_ids_from_nodes_data(
@@ -7636,27 +8046,178 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  return spec;
 	}
 
+	function table(...args) {
+	  let tab = table$1(...args);
+	  tab.removeAttribute("style");
+	  return tab;
+	}
+
 	function node_row_to_table(node_as_dict) {
 	  return table([node_as_dict], { layout: "auto" });
 	}
 
 	function edge_row_to_table(edge_as_dict, splink_settings) {
-	  const cols_in_use = splink_settings.cols_used_by_model();
+	  const cols_in_use = splink_settings.cols_used_by_model;
 	  const row_1 = {};
 	  const row_2 = {};
-	  cols_in_use.forEach((col) => {
-	    edge_as_dict[col + "_l"];
-	    edge_as_dict[col + "_r"];
 
-	    // if (l_val && r_val)
+	  let col_priority = { 2: [], 1: [], 0: [] };
+
+	  cols_in_use.forEach((col) => {
+	    let l_val = edge_as_dict[col + "_l"];
+	    let r_val = edge_as_dict[col + "_r"];
+
 	    row_1[col] = edge_as_dict[col + "_l"];
 	    row_2[col] = edge_as_dict[col + "_r"];
+
+	    if (l_val && r_val) {
+	      col_priority[2].push(col);
+	    } else if (l_val || r_val) {
+	      col_priority[1].push(col);
+	    } else {
+	      col_priority[0].push(col);
+	    }
 	  });
-	  let table_data = [row_1, row_2];
+
+	  col_priority = col_priority[2]
+	    .concat(col_priority[1])
+	    .concat(col_priority[0]);
+
+	  let row_1_ordered = {};
+	  let row_2_ordered = {};
+	  col_priority.forEach((col) => {
+	    row_1_ordered[col] = row_1[col];
+	    row_2_ordered[col] = row_2[col];
+	  });
+	  let table_data = [row_1_ordered, row_2_ordered];
 
 	  return table(table_data, { layout: "auto" });
 	}
 
+	// export function comparison_column_table(edge_as_dict, splink_settings) {
+	//   // let splink_settings = new SplinkSettings
+	//   let ccs = splink_settings.comparison_columns;
+
+	//   let row_left = {};
+	//   let row_right = {};
+	//   let row_case = {};
+
+	//   ccs.forEach((cc) => {
+	//     let expr = cc.case_expression_from_row(edge_as_dict);
+	//     let data = cc.concat_data_from_row(edge_as_dict);
+
+	//     row_left[cc.name] = data["left"];
+	//     row_right[cc.name] = data["right"];
+	//     row_case[cc.name] = expr;
+	//   });
+	//   return table([row_left, row_right, row_case], { layout: "auto" });
+	// }
+
+	function comparison_column_table(edge_as_dict, splink_settings) {
+	  // let splink_settings = new SplinkSettings
+	  let ccs = splink_settings.comparison_columns;
+
+	  let rows = [];
+
+	  ccs.forEach((cc) => {
+	    let this_row = {};
+	    this_row["comparison_column_name"] = cc.name;
+
+	    let expr = cc.case_expression_from_row(edge_as_dict);
+	    let data = cc.concat_data_from_row(edge_as_dict);
+
+	    this_row["data_left"] = data["left"];
+
+	    this_row["data_right"] = data["right"];
+	    this_row["case expression"] = expr;
+
+	    rows.push(this_row);
+	  });
+	  return table(rows, { layout: "auto" });
+	}
+
+	function detect_node_metrics(data) {
+	  const node_metrics = new Map([["None", "none"]]);
+	  const keys = Object.keys(data[0]);
+
+	  if (keys.includes("eigen_centrality")) {
+	    node_metrics.set("Eigen Centrality", "eigen_centrality");
+	  }
+
+	  return node_metrics;
+	}
+
+	function detect_edge_metrics(data) {
+	  const node_metrics = new Map();
+	  const keys = Object.keys(data[0]);
+
+	  if (keys.includes("match_probability")) {
+	    node_metrics.set("Match probability", "match_probability");
+	  }
+
+	  if (keys.includes("weight")) {
+	    node_metrics.set("Match weight (log2 bayes factor)", "weight");
+	  }
+
+	  if (keys.includes("tf_adjusted_match_prob")) {
+	    node_metrics.set("TF adjusted match probability", "tf_adjusted_match_prob");
+	  }
+
+	  if (keys.includes("edge_betweenness")) {
+	    node_metrics.set("Edge betweenness", "edge_betweenness");
+	  }
+
+	  if (keys.includes("is_bridge")) {
+	    node_metrics.set("Is bridge", "is_bridge");
+	  }
+
+	  return node_metrics;
+	}
+
+	const metric_vis_args = {
+	  edge_colour: {
+	    match_probability: {
+	      edge_metric_name: "match_probability",
+	      reverse: false,
+	      domain: [0, 1],
+	      range: { scheme: "redyellowgreen" },
+	    },
+	    tf_adjusted_match_prob: {
+	      edge_metric_name: "tf_adjusted_match_prob",
+	      reverse: false,
+	      domain: [0, 1],
+	      range: { scheme: "redyellowgreen" },
+	    },
+	    weight: {
+	      edge_metric_name: "weight",
+	      reverse: false,
+	      domain: [-20, 20],
+	      range: { scheme: "redyellowgreen" },
+	    },
+	    edge_betweenness: {
+	      edge_metric_name: "edge_betweenness",
+	      reverse: true,
+	      domain: [0, 1],
+	      range: { scheme: "redyellowgreen" },
+	    },
+	    is_bridge: {
+	      edge_metric_name: "is_bridge",
+	      reverse: true,
+	      domain: [0, 1],
+	      range: { scheme: "redyellowgreen" },
+	    },
+	  },
+	  node_size: {
+	    eigen_centrality: {
+	      node_metric_name: "eigen_centrality",
+	      reverse: false,
+	      domain: { data: "node-data", field: "eigen_centrality" },
+	      range: [100, 2000],
+	    },
+	  },
+	};
+
+	exports.ComparisonColumn = ComparisonColumn;
 	exports.ForceDirectedChart = ForceDirectedChart;
 	exports.Inspector = Inspector;
 	exports.Runtime = Runtime;
@@ -7664,7 +8225,10 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	exports.bayes_factor_to_prob = bayes_factor_to_prob;
 	exports.checkbox = checkbox;
 	exports.cloneDeep = cloneDeep;
+	exports.comparison_column_table = comparison_column_table;
 	exports.define = define;
+	exports.detect_edge_metrics = detect_edge_metrics;
+	exports.detect_node_metrics = detect_node_metrics;
 	exports.edge_row_to_table = edge_row_to_table;
 	exports.filter_edges_with_cluster_id = filter_edges_with_cluster_id;
 	exports.filter_nodes_with_cluster_id = filter_nodes_with_cluster_id;
@@ -7675,6 +8239,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	exports.get_waterfall_chart_spec = get_waterfall_chart_spec;
 	exports.log2 = log2;
 	exports.log2_bayes_factor_to_prob = log2_bayes_factor_to_prob;
+	exports.metric_vis_args = metric_vis_args;
 	exports.node_row_to_table = node_row_to_table;
 	exports.prob_to_bayes_factor = prob_to_bayes_factor;
 	exports.prob_to_log2_bayes_factor = prob_to_log2_bayes_factor;
@@ -7701,17 +8266,26 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 
     <h2>Splink cluster visualiser</h2>
 
-
+    <div id="controls">
     <div id="observablehq-selected-cluster-id"></div>
+
+    <div id="observablehq-edge_colour_metric"></div>
+    <div id="observablehq-node_size_metric"></div>
+
+    <div id="observablehq-show_edge_comparison_type"></div>
     <div id="observablehq-show_full_tables"></div>
+
 
     <div id="observablehq-score_threshold_filter"></div>
     <div id="observablehq-corresponding_probability"></div>
+    <div id="observablehq-additional_graph_controls"></div>
+    </div>
     <div id="observablehq-nothing-selected-message"></div>
     <div id="observablehq-force-directed-chart"></div>
 
     <div id="observablehq-edge-table-header"></div>
     <div id="observablehq-edge-table"></div>
+    <div id="observablehq-comparison_columns_table"></div>
     <div id="observablehq-waterfall-chart"></div>
     <div id="observablehq-node-table-header"></div>
     <div id="observablehq-node-table"></div>
@@ -7747,6 +8321,8 @@ if (name === "viewof force_directed_chart") return new splink_vis_utils.Inspecto
 if (name === "waterfall_chart") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-waterfall-chart"));
 if (name === "edge_table_header") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-edge-table-header"));
 if (name === "edge_table") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-edge-table"));
+if (name === "comparison_columns_table") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-comparison_columns_table"));
+
 if (name === "node_table_header") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-node-table-header"));
 if (name === "node_table") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-node-table"));
 
@@ -7755,6 +8331,13 @@ if (name === "viewof score_threshold_filter") return new splink_vis_utils.Inspec
 if (name === "corresponding_probability") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-corresponding_probability"));
 if (name === "edges_full_table") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-edges_full_table"));
 if (name === "nodes_full_table") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-nodes_full_table"));
+
+
+if (name === "viewof edge_colour_metric") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-edge_colour_metric"));
+if (name === "viewof node_size_metric") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-node_size_metric"));
+if (name === "viewof show_edge_comparison_type") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-show_edge_comparison_type"));
+if (name === "viewof additional_graph_controls") return new splink_vis_utils.Inspector(document.querySelector("#observablehq-additional_graph_controls"));
+
 
 
 
