@@ -6326,7 +6326,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  main.variable(observer("viewof show_full_tables")).define("viewof show_full_tables", ["raw_clusters_data","splink_vis_utils"], function(raw_clusters_data,splink_vis_utils)
 	{
 	  let options;
-	  
+
 	  if (raw_clusters_data == null) {
 	    options = new Map([
 	      ["Show table of all edges", "edges"],
@@ -6377,7 +6377,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 
 	  if (show_edge_comparison_type.includes("raw_edge_data")) {
 	    return html`
-  <h3>Rows compared by selected edge</h3>   
+  <h3>Rows compared by selected edge</h3>
     ${splink_vis_utils.edge_row_to_table(selected_edge, ss)}
 
 `;
@@ -6410,7 +6410,7 @@ function(e,t){var r={};for(var n in e)Object.prototype.hasOwnProperty.call(e,n)&
 	  }
 	  if (show_edge_comparison_type.includes("node_history")) {
 	    return html`
-<h3>History of clicked nodes</h3> 
+<h3>History of clicked nodes</h3>
 ${splink_vis_utils.node_rows_to_table(node_history, ss)}
 `;
 	  }
@@ -6473,7 +6473,7 @@ ${splink_vis_utils.node_rows_to_table(node_history, ss)}
 	    return html`
     <h3>Edges corresponding to selected cluster, filtered by threshold</h3>
     Click column headers to sort
-    
+
     ${splink_vis_utils.table(filtered_edges, { layout: "auto" })}
 
   `;
@@ -6492,7 +6492,7 @@ ${splink_vis_utils.node_rows_to_table(node_history, ss)}
 	    return html`
     <h3>All nodes corresponding to selected cluster</h3>
     Click column headers to sort
-    
+
     ${splink_vis_utils.table(filtered_nodes, { layout: "auto" })}
 
   `;
@@ -6507,7 +6507,7 @@ ${splink_vis_utils.node_rows_to_table(node_history, ss)}
 	    return html`
     <h3>All clusters</h3>
     Click column headers to sort
-    
+
     ${splink_vis_utils.table(raw_clusters_data, { layout: "auto" })}
 
   `;
@@ -8486,7 +8486,7 @@ ${splink_vis_utils.node_rows_to_table(node_history, ss)}
 
 
 
-import define from "https://api.observablehq.com/d/c43e4e0aeb54d263.js?v=3";
+import define from "https://api.observablehq.com/d/c43e4e0aeb54d263@176.js?v=3";
 new splink_vis_utils.Runtime().module(define, name => {
 
 
