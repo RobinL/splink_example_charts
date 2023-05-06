@@ -7,145 +7,27 @@
     <title>Splink Clerical Labelling Tool</title>
     <meta name="description" content="desc" />
 
-    <style>
-table#main-interface-table {
-    all: initial;
-    table-layout: fixed;
-    display: table;
-    border-style: none;
-    font-family: sans-serif;
-    font-size:1.0em;
-    border-collapse: collapse;
-    overflow: scroll;
-  }
-
-  #main-interface-table td:first-child {
-    max-width: 140px;
-  }
-  #main-interface-table td:last-child {
-    max-width: 200px;
-  }
-
-  #main-interface-table tr {
-    border-style: none;
-    border-color: #ddd;
-    border-width: 1px;
-    overflow: hidden;
-  }
-
-  #main-interface-table td,
-  #main-interface-table th{
-    padding: 5px;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  #main-interface-table td{
-    border-style: none;
-    border-top-style: solid;
-    border-top-color: #ddd;
-    border-bottom-style: solid;
-    border-bottom-color: #ddd;
-    border-width: 1px;
-  }
-
-  #main-interface-table th {
-    text-align: left
-  }
-
-  .d3-tooltip {
-    font-family: sans-serif;
-    font-size:1.0em;
-    padding-left: 4px;
-    padding-right: 4px;
-    position: absolute;
-    visibility: hidden;
-    border-radius:4px;
-    color: #000;
-    background: rgba(255,255,255,1.0);
-    line-height: 1.3;
-
-  }
-  .d3-tooltip p {
-    padding: 1px;
-    margin: 1px;
-  }
-
-  #outer_container h1 {
-  font-family: sans-serif;
-  }
-
-
-/* Details box */
-details {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    font-family: sans-serif;
-}
-
-details summary {
-    background-color: #f5f5f5;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin: 0;
-    outline: none;
-    padding: 8px;
-    transition: background-color 0.2s ease-in-out;
-}
-
-details[open] summary {
-    background-color: #e0e0e0;
-}
-
-details p {
-    margin: 8px;
-}
-
-/* Download button */
-#observablehq-dl {
-    padding: 20px;
-    border-radius: 8px;
-
-    background-color: #ffffff;
-    font-family: sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333333;
-}</style>
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap">
 
-    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script>
-    if(true) {
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    }
-    if (typeof ga === "function") {
-      ga('create', 'UA-149828982-1', 'auto', {});
-  
-        }
-    </script>
+
 </head>
 
 <body>
- 
-
 
     <div id="observablehq-styles"></div>
     <div id="outer_container">
+
+        <div id="observablehq-styles"></div>
         <h1>Splink Clerical Labelling Tool</h1>
         <div id="observablehq-blurb"></div>
+        <div id="observablehq-checkboxes"></div>
         <div id="observablehq-table-interface"></div>
         <div id="observablehq-dl"></div>
+
     </div>
 
 
@@ -153,13 +35,13 @@ details p {
 
 
     <script>
-        pairwise_comparison_data_from_splink = [{"match_weight": -8.618716493876251, "match_probability": 0.0025374903109360125, "unique_id_l": "Q20379060-5", "unique_id_r": "Q52155443-1", "first_name_l": "charles", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.02407396408703055, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.01732291764223888, "bf_tf_adj_first_name": 1.0, "surname_l": "burrows", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 0.0005427349499598376, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.016982969183787944, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -9.946866738091707, "match_probability": 0.0010121734586606428, "unique_id_l": "Q20379060-9", "unique_id_r": "Q52155443-1", "first_name_l": "charlie", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.005028607630021184, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "burroughs", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 0.00028222217397911556, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.016982969183787944, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-02", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.00015315890236119973, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.870292368681864, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -9.629689270949841, "match_probability": 0.0012607436837724269, "unique_id_l": "Q16063600-4", "unique_id_r": "Q52155443-1", "first_name_l": "francis", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.009186117875314289, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.01732291764223888, "bf_tf_adj_first_name": 1.0, "surname_l": "dunhan", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.016982969183787944, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6hu", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 49.50974025974031, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "cricketer", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": 0.121001225829412, "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.528388017475223, "match_probability": 0.07975414107842765, "unique_id_l": "Q16198937-6", "unique_id_r": "Q52155443-1", "first_name_l": "", "first_name_r": "cyril", "gamma_first_name": -1, "tf_first_name_l": "", "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 1.0, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-1", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-2", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-3", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 23.694955148715785, "match_probability": 0.9999999263610271, "unique_id_l": "Q52155443-4", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.0502859496126683, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-5", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.142194692005104, "match_probability": 0.47537946553206123, "unique_id_l": "Q52155443-7", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransom", "surname_r": "ransome", "gamma_surname": 2, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 31.01067119155357, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "ba4 6at", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025015953842948583, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.0502859496126683, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.9503497419591542, "match_probability": 0.0607580353997953, "unique_id_l": "Q52155443-10", "unique_id_r": "Q52155443-1", "first_name_l": "ransom", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.01732291764223888, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "1821-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.0016081684747925973, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.870292368681864, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 49.50974025974031, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 12.613717375214275, "match_probability": 0.9998404769561743, "unique_id_l": "Q52155443-12", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.0502859496126683, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 19.40373570011912, "match_probability": 0.9999985582402395, "unique_id_l": "Q52155443-13", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1852-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.005488194001276325, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.870292368681864, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.2581251116075645, "match_probability": 0.4553892694020409, "unique_id_l": "Q52155443-15", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lq", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 49.50974025974031, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.0502859496126683, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 4.055575724970153, "match_probability": 0.9432732902779108, "unique_id_l": "Q52155443-16", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 49.50974025974031, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 28.008655985293505, "match_probability": 0.9999999962969941, "unique_id_l": "Q52155443-6", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -6.895072477824476, "match_probability": 0.008331874431976558, "unique_id_l": "Q52155443-14", "unique_id_r": "Q52155443-1", "first_name_l": "cyeil", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7909819655327062, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "sn3 4rt", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025015953842948583, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 25.465144965531376, "match_probability": 0.9999999784112492, "unique_id_l": "Q52155443-9", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 516.4552880481514, "bf_tf_adj_dob": 0.19319285033557115, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-8", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-11", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 74.89856720945083, "bf_tf_adj_first_name": 22.88115961732744, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1578.349191919192, "bf_tf_adj_surname": 1.9803625125742141, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 7153.851851851852, "bf_tf_adj_postcode_fake": 0.5199213063151682, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 167.06318181818182, "bf_tf_adj_birth_place": 3.818771717998738, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}];
+        pairwise_comparison_data_from_splink = [{"match_weight": -8.615669913973383, "match_probability": 0.0025428408225983776, "unique_id_l": "Q20379060-5", "unique_id_r": "Q52155443-1", "first_name_l": "charles", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.02407396408703055, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "burrows", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 0.0005427349499598376, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.01698375177343176, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.5283880174752227, "match_probability": 0.07975414107842767, "unique_id_l": "Q16198937-6", "unique_id_r": "Q52155443-1", "first_name_l": "", "first_name_r": "cyril", "gamma_first_name": -1, "tf_first_name_l": "", "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 1.0, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -9.5335220940977, "match_probability": 0.0013475294521778283, "unique_id_l": "Q16063600-4", "unique_id_r": "Q52155443-1", "first_name_l": "francis", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.009186117875314289, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "dunhan", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.01698375177343176, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6hu", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "cricketer", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": 0.121001225829412, "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-1", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-2", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-3", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 23.693023748659826, "match_probability": 0.9999999262623773, "unique_id_l": "Q52155443-4", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-5", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.19084374404047819, "match_probability": 0.4669774396177109, "unique_id_l": "Q52155443-7", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransom", "surname_r": "ransome", "gamma_surname": 2, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 30.022420634920657, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "ba4 6at", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025016071704776904, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.8569704275345944, "match_probability": 0.06455841808094122, "unique_id_l": "Q52155443-10", "unique_id_r": "Q52155443-1", "first_name_l": "ransom", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "1821-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.0016081684747925973, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.8686522668466651, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 28.008655985293505, "match_probability": 0.9999999962969941, "unique_id_l": "Q52155443-6", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -6.948765002764115, "match_probability": 0.008029932029665366, "unique_id_l": "Q52155443-14", "unique_id_r": "Q52155443-1", "first_name_l": "cyeil", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "sn3 4rt", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025016071704776904, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 12.558086653025345, "match_probability": 0.9998342066067741, "unique_id_l": "Q52155443-12", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 19.347314994639657, "match_probability": 0.9999985007391519, "unique_id_l": "Q52155443-13", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1852-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.005488194001276325, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.8686522668466651, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.2206352368472217, "match_probability": 0.4618411707936465, "unique_id_l": "Q52155443-15", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lq", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-8", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-11", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 25.465144965531376, "match_probability": 0.9999999784112492, "unique_id_l": "Q52155443-9", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 4.0949969997864555, "match_probability": 0.9447178178774029, "unique_id_l": "Q52155443-16", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}];
     </script>
 
 
 
     <script>
-        splink_settings_from_splink = {"probability_two_random_records_match": 0.00013582694460587586, "link_type": "dedupe_only", "blocking_rules_to_generate_predictions": ["l.first_name = r.first_name", "l.surname = r.surname"], "comparisons": [{"output_column_name": "first_name", "comparison_levels": [{"sql_condition": "\"first_name_l\" IS NULL OR \"first_name_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"first_name_l\" = \"first_name_r\"", "label_for_charts": "Exact match", "u_probability": 0.012683820737763423, "tf_adjustment_column": "first_name", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.00412872134168257}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.02107085545931772}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9621166024612363}], "comparison_description": "Exact match vs. First_Name within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "surname", "comparison_levels": [{"sql_condition": "\"surname_l\" IS NULL OR \"surname_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"surname_l\" = \"surname_r\"", "label_for_charts": "Exact match", "u_probability": 0.0006018946915320104, "tf_adjustment_column": "surname", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.000537449401327573}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.01748534477622285}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9813753111309176}], "comparison_description": "Exact match vs. Surname within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "dob", "comparison_levels": [{"sql_condition": "\"dob_l\" IS NULL OR \"dob_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"dob_l\" = \"dob_r\"", "label_for_charts": "Exact match", "u_probability": 0.0018394622380387504, "tf_adjustment_column": "dob", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 1", "label_for_charts": "Levenshtein <= 1", "u_probability": 0.01915065243179122}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.08044760775009885}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.8985622775800711}], "comparison_description": "Exact match vs. Dob within levenshtein thresholds 1, 2 vs. anything else"}, {"output_column_name": "postcode_fake", "comparison_levels": [{"sql_condition": "\"postcode_fake_l\" IS NULL OR \"postcode_fake_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"postcode_fake_l\" = \"postcode_fake_r\"", "label_for_charts": "Exact match", "u_probability": 0.0001327955931536494, "tf_adjustment_column": "postcode_fake", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"postcode_fake_l\", \"postcode_fake_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.0005049511443373335}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.999362253262509}], "comparison_description": "Exact match vs. Postcode_Fake within levenshtein threshold 2 vs. anything else"}, {"output_column_name": "birth_place", "comparison_levels": [{"sql_condition": "\"birth_place_l\" IS NULL OR \"birth_place_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"birth_place_l\" = \"birth_place_r\"", "label_for_charts": "Exact match", "u_probability": 0.0056864713676643835, "tf_adjustment_column": "birth_place", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9943135286323356}], "comparison_description": "Exact match vs. anything else"}, {"output_column_name": "occupation", "comparison_levels": [{"sql_condition": "\"occupation_l\" IS NULL OR \"occupation_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"occupation_l\" = \"occupation_r\"", "label_for_charts": "Exact match", "u_probability": 0.039032006245121, "tf_adjustment_column": "occupation", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.960967993754879}], "comparison_description": "Exact match vs. anything else"}], "retain_matching_columns": true, "retain_intermediate_calculation_columns": true, "max_iterations": 10, "em_convergence": 0.01, "sql_dialect": "duckdb", "linker_uid": "B9Ec22AC"};
+        splink_settings_from_splink = {"probability_two_random_records_match": 0.00013582694460587586, "link_type": "dedupe_only", "blocking_rules_to_generate_predictions": ["l.first_name = r.first_name", "l.surname = r.surname"], "comparisons": [{"output_column_name": "first_name", "comparison_levels": [{"sql_condition": "\"first_name_l\" IS NULL OR \"first_name_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"first_name_l\" = \"first_name_r\"", "label_for_charts": "Exact match", "u_probability": 0.013502398903358465, "tf_adjustment_column": "first_name", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.004496418075807224}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.021869924042551194}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9601312589782831}], "comparison_description": "Exact match vs. First_Name within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "surname", "comparison_levels": [{"sql_condition": "\"surname_l\" IS NULL OR \"surname_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"surname_l\" = \"surname_r\"", "label_for_charts": "Exact match", "u_probability": 0.0006829111400430454, "tf_adjustment_column": "surname", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.0005551406686801531}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.01743185758438909}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9813300906068877}], "comparison_description": "Exact match vs. Surname within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "dob", "comparison_levels": [{"sql_condition": "\"dob_l\" IS NULL OR \"dob_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"dob_l\" = \"dob_r\"", "label_for_charts": "Exact match", "u_probability": 0.0019264516379695524, "tf_adjustment_column": "dob", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 1", "label_for_charts": "Levenshtein <= 1", "u_probability": 0.019186810767407678}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.07288300772523296}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9060037298693898}], "comparison_description": "Exact match vs. Dob within levenshtein thresholds 1, 2 vs. anything else"}, {"output_column_name": "postcode_fake", "comparison_levels": [{"sql_condition": "\"postcode_fake_l\" IS NULL OR \"postcode_fake_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"postcode_fake_l\" = \"postcode_fake_r\"", "label_for_charts": "Exact match", "u_probability": 0.00016906715186255645, "tf_adjustment_column": "postcode_fake", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"postcode_fake_l\", \"postcode_fake_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.0004733880252151581}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9993575448229223}], "comparison_description": "Exact match vs. Postcode_Fake within levenshtein threshold 2 vs. anything else"}, {"output_column_name": "birth_place", "comparison_levels": [{"sql_condition": "\"birth_place_l\" IS NULL OR \"birth_place_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"birth_place_l\" = \"birth_place_r\"", "label_for_charts": "Exact match", "u_probability": 0.004354448176208701, "tf_adjustment_column": "birth_place", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9956455518237913}], "comparison_description": "Exact match vs. anything else"}, {"output_column_name": "occupation", "comparison_levels": [{"sql_condition": "\"occupation_l\" IS NULL OR \"occupation_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"occupation_l\" = \"occupation_r\"", "label_for_charts": "Exact match", "u_probability": 0.03694787905314221, "tf_adjustment_column": "occupation", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9630521209468578}], "comparison_description": "Exact match vs. anything else"}], "retain_matching_columns": true, "retain_intermediate_calculation_columns": true, "max_iterations": 10, "em_convergence": 0.01, "sql_dialect": "duckdb", "linker_uid": "Cfa94oRW"};
     </script>
 
 
@@ -498,7 +380,7 @@ details p {
  * ---
  *
  * Name: 0420fc5db15e44ab
- * Version: 2215.0.0
+ * Version: 2711.0.0
  * License: null
  * Private: false
  * Homepage: https://observablehq.com/d/0420fc5db15e44ab
@@ -3679,11 +3561,11 @@ details p {
 
   // These are copied from d3-array; TODO import once this package adopts type: module.
 
-  function descending$3(a, b) {
+  function descending$4(a, b) {
     return a == null || b == null ? NaN : b < a ? -1 : b > a ? 1 : b >= a ? 0 : NaN;
   }
 
-  function ascending$4(a, b) {
+  function ascending$5(a, b) {
     return a == null || b == null ? NaN : a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
   }
 
@@ -4186,7 +4068,7 @@ details p {
       }
     }
     for (const {column, direction} of reverse$2(operations.sort)) {
-      const compare = direction === "desc" ? descending$3 : ascending$4;
+      const compare = direction === "desc" ? descending$4 : ascending$5;
       if (source === input) source = source.slice(); // defensive copy
       source.sort((a, b) => compare(a[column], b[column]));
     }
@@ -5796,6 +5678,10 @@ details p {
     return label;
   }
 
+  function arrayify$1(array) {
+    return Array.isArray(array) ? array : Array.from(array);
+  }
+
   // Note: use formatAuto (or any other localized format) to present values to the
   // user; stringify is only intended for machine values.
   function stringify(x) {
@@ -5840,6 +5726,223 @@ details p {
   function localize(f) {
     let key = localize, value;
     return (locale = "en") => locale === key ? value : (value = f(key = locale));
+  }
+
+  function ascending$4(a, b) {
+    return defined(b) - defined(a) || (a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN);
+  }
+
+  function descending$3(b, a) {
+    return defined(a) - defined(b) || (a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN);
+  }
+
+  function defined(d) {
+    return d != null && !Number.isNaN(d);
+  }
+
+  const first = ([x]) => x;
+  const second$1 = ([, x]) => x;
+
+  function createChooser({multiple: fixedMultiple, render, selectedIndexes, select}) {
+    return function chooser(data, {
+      locale,
+      keyof = data instanceof Map ? first : identity$a,
+      valueof = data instanceof Map ? second$1 : identity$a,
+      format = data instanceof Map ? first : formatLocaleAuto(locale),
+      multiple,
+      key,
+      value,
+      disabled = false,
+      sort,
+      unique,
+      ...options
+    } = {}) {
+      if (typeof keyof !== "function") throw new TypeError("keyof is not a function");
+      if (typeof valueof !== "function") throw new TypeError("valueof is not a function");
+      if (typeof format !== "function") throw new TypeError("format is not a function");
+      if (fixedMultiple !== undefined) multiple = fixedMultiple;
+      sort = maybeSort(sort);
+      let size = +multiple;
+      if (value === undefined) value = key !== undefined && data instanceof Map ? (size > 0 ? Array.from(key, k => data.get(k)) : data.get(key)) : undefined;
+      unique = !!unique;
+      data = arrayify$1(data);
+      let keys = data.map((d, i) => [keyof(d, i, data), i]);
+      if (sort !== undefined) keys.sort(([a], [b]) => sort(a, b));
+      if (unique) keys = [...new Map(keys.map(o => [intern$1(o[0]), o])).values()];
+      const index = keys.map(second$1);
+      if (multiple === true) size = Math.max(1, Math.min(10, index.length));
+      else if (size > 0) multiple = true;
+      else multiple = false, size = undefined;
+      const [form, input] = render(
+        data,
+        index,
+        maybeSelection(data, index, value, multiple, valueof),
+        maybeDisabled(data, index, disabled, valueof),
+        {
+          ...options,
+          format,
+          multiple,
+          size
+        }
+      );
+      form.onchange = dispatchInput;
+      form.oninput = oninput;
+      form.onsubmit = preventDefault;
+      function oninput(event) {
+        if (event && event.isTrusted) form.onchange = null;
+        if (multiple) {
+          value = selectedIndexes(input).map(i => valueof(data[i], i, data));
+        } else {
+          const i = selectedIndex(input);
+          value = i < 0 ? null : valueof(data[i], i, data);
+        }
+      }
+      oninput();
+      return Object.defineProperty(form, "value", {
+        get() {
+          return value;
+        },
+        set(v) {
+          if (multiple) {
+            const selection = new Set(v);
+            for (const e of input) {
+              const i = +e.value;
+              select(e, selection.has(valueof(data[i], i, data)));
+            }
+          } else {
+            input.value = index.find(i => v === valueof(data[i], i, data));
+          }
+          oninput();
+        }
+      });
+    };
+  }
+
+  function maybeSelection(data, index, value, multiple, valueof) {
+    const values = new Set(value === undefined ? [] : multiple ? arrayify$1(value) : [value]);
+    if (!values.size) return () => false;
+    const selection = new Set();
+    for (const i of index) {
+      if (values.has(valueof(data[i], i, data))) {
+        selection.add(i);
+      }
+    }
+    return i => selection.has(i);
+  }
+
+  function maybeDisabled(data, index, value, valueof) {
+    if (typeof value === "boolean") return value;
+    const values = new Set(arrayify$1(value));
+    const disabled = new Set();
+    for (const i of index) {
+      if (values.has(valueof(data[i], i, data))) {
+        disabled.add(i);
+      }
+    }
+    return i => disabled.has(i);
+  }
+
+  function maybeSort(sort) {
+    if (sort === undefined || sort === false) return;
+    if (sort === true || sort === "ascending") return ascending$4;
+    if (sort === "descending") return descending$3;
+    if (typeof sort === "function") return sort;
+    throw new TypeError("sort is not a function");
+  }
+
+  function selectedIndex(input) {
+    return input.value ? +input.value : -1;
+  }
+
+  function intern$1(value) {
+    return value !== null && typeof value === "object" ? value.valueOf() : value;
+  }
+
+  function createCheckbox(multiple, type) {
+    return createChooser({
+      multiple,
+      render(data, index, selected, disabled, {format, label}) {
+        const form = html$1`<form class="__ns__ __ns__-checkbox">
+      ${maybeLabel(label)}<div>
+        ${index.map(i => html$1`<label><input type=${type} disabled=${typeof disabled === "function" ? disabled(i) : disabled} name=input value=${i} checked=${selected(i)}>${format(data[i], i, data)}`)}
+      </div>
+    </form>`;
+        return [form, inputof(form.elements.input, multiple)];
+      },
+      selectedIndexes(input) {
+        return Array.from(input).filter(i => i.checked).map(i => +i.value);
+      },
+      select(input, selected) {
+        input.checked = selected;
+      }
+    });
+  }
+
+  const checkbox = createCheckbox(true, "checkbox");
+
+  // The input is undefined if there are no options, or an individual input
+  // element if there is only one; we want these two cases to behave the same as
+  // when there are two or more options, i.e., a RadioNodeList.
+  function inputof(input, multiple) {
+    return input === undefined ? new OptionZero(multiple ? [] : null)
+      : typeof input.length === "undefined" ? new (multiple ? MultipleOptionOne : OptionOne)(input)
+      : input;
+  }
+
+  class OptionZero {
+    constructor(value) {
+      this._value = value;
+    }
+    get value() {
+      return this._value;
+    }
+    set value(v) {
+      // ignore
+    }
+    *[Symbol.iterator]() {
+      // empty
+    }
+  }
+
+  // TODO If we allow selected radios to be cleared by command-clicking, then
+  // assigning a radio’s value programmatically should also clear the selection.
+  // This will require changing this class and also wrapping RadioNodeList in the
+  // common case to change the value setter’s behavior.
+  class OptionOne {
+    constructor(input) {
+      this._input = input;
+    }
+    get value() {
+      const {_input} = this;
+      return _input.checked ? _input.value : "";
+    }
+    set value(v) {
+      const {_input} = this;
+      if (_input.checked) return;
+      _input.checked = stringify(v) === _input.value;
+    }
+    *[Symbol.iterator]() {
+      yield this._input;
+    }
+  }
+
+  class MultipleOptionOne {
+    constructor(input) {
+      this._input = input;
+      this._value = input.checked ? [input.value] : [];
+    }
+    get value() {
+      return this._value;
+    }
+    set value(v) {
+      const {_input} = this;
+      if (_input.checked) return;
+      _input.checked = stringify(v) === _input.value;
+      this._value = _input.checked ? [_input.value] : [];
+    }
+    *[Symbol.iterator]() {
+      yield this._input;
+    }
   }
 
   function createText(form, input, value, {
@@ -7952,216 +8055,357 @@ details p {
   function _default_pairwise_comparison_data(){return(
   [
     {
-      match_weight: -0.37497671866384624,
-      match_probability: 0.43538483542094575,
-      unique_id_l: 4,
-      unique_id_r: 6,
-      first_name_l: "Watson",
-      first_name_r: "watson",
-      gamma_first_name: 0,
-      bf_first_name: 0.025313802295168154,
-      surname_l: "Nooah",
-      surname_r: "Noah ",
-      gamma_surname: 0,
-      bf_surname: 0.05037493843764211,
-      dob_l: "2008-03-23",
-      dob_r: "2008-03-23",
-      gamma_dob: 1,
-      bf_dob: 256.5,
-      city_l: "Bolton",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.015712682379349047,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthew78@ballard-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 1,
-      bf_email: 233.39775421085463
+      match_weight: 24.72661262857488,
+      match_probability: 0.9999999639796531,
+      source_dataset_l: "_a",
+      source_dataset_r: "_a",
+      unique_id_l: 79,
+      unique_id_r: 79,
+      first_name_l: "Carr",
+      first_name_r: "Carr",
+      gamma_first_name: 3,
+      tf_first_name_l: 0.0033333333333333335,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 185.00697674418603,
+      bf_tf_adj_first_name: 1.540482445665154,
+      surname_l: "Ethan ",
+      surname_r: "Ethan ",
+      gamma_surname: 3,
+      tf_surname_l: 0.005417118093174431,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 130.37728776185224,
+      bf_tf_adj_surname: 1.3450962434525533,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
     },
     {
-      match_weight: -0.37497671866384624,
-      match_probability: 0.43538483542094575,
-      unique_id_l: 5,
-      unique_id_r: 6,
-      first_name_l: "Noah ",
-      first_name_r: "Watson",
-      gamma_first_name: 0,
-      bf_first_name: 0.025313802295168154,
-      surname_l: "Watson",
-      surname_r: "Noah ",
-      gamma_surname: 0,
-      bf_surname: 0.05037493843764211,
-      dob_l: "2008-03-23",
-      dob_r: "2008-03-23",
-      gamma_dob: 1,
-      bf_dob: 256.5,
-      city_l: "Bolton",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.015712682379349047,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthew78@ballard-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 1,
-      bf_email: 233.39775421085463
-    },
-    {
-      match_weight: 11.330949750235506,
-      match_probability: 0.9996119607202627,
-      unique_id_l: 8,
-      unique_id_r: 6,
-      first_name_l: "Watson",
-      first_name_r: "Watson",
-      gamma_first_name: 2,
-      bf_first_name: 170.5825565912117,
-      surname_l: "Noah ",
-      surname_r: "Noah ",
-      gamma_surname: 1,
-      bf_surname: 127.63746447742344,
-      dob_l: "2008-06-15",
-      dob_r: "2008-03-23",
+      match_weight: 11.543499994820714,
+      match_probability: 0.9996651002856178,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 80,
+      unique_id_r: 79,
+      first_name_l: "Carr",
+      first_name_r: "Carr",
+      gamma_first_name: 3,
+      tf_first_name_l: 0.0033333333333333335,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 185.00697674418603,
+      bf_tf_adj_first_name: 1.540482445665154,
+      surname_l: "Ethan ",
+      surname_r: "Ethan ",
+      gamma_surname: 3,
+      tf_surname_l: 0.005417118093174431,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 130.37728776185224,
+      bf_tf_adj_surname: 1.3450962434525533,
+      dob_l: "2012-11-15",
+      dob_r: "2013-01-21",
       gamma_dob: 0,
-      bf_dob: 0.050185873605948,
-      city_l: "Bolton",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.015712682379349047,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthew78@ballard-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 1,
-      bf_email: 233.39775421085463
+      tf_dob_l: 0.001,
+      tf_dob_r: 0.006,
+      bf_dob: 0.01702393748966431,
+      bf_tf_adj_dob: 1.0,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
     },
     {
-      match_weight: 11.467648854217567,
-      match_probability: 0.9996470278874315,
-      unique_id_l: 10,
-      unique_id_r: 6,
-      first_name_l: "Watson",
-      first_name_r: "Watson",
-      gamma_first_name: 2,
-      bf_first_name: 170.5825565912117,
-      surname_l: "Noah ",
-      surname_r: "Noah ",
-      gamma_surname: 1,
-      bf_surname: 127.63746447742344,
-      dob_l: "2008-03-23",
-      dob_r: "2008-03-23",
-      gamma_dob: 1,
-      bf_dob: 256.5,
-      city_l: "Bolton",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.015712682379349047,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthbw78eallard-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 0,
-      bf_email: 0.050204346994709714
-    },
-    {
-      match_weight: -0.8517410217826423,
-      match_probability: 0.35654723630577134,
-      unique_id_l: 11,
-      unique_id_r: 6,
-      first_name_l: "Watson",
-      first_name_r: "Watson",
-      gamma_first_name: 2,
-      bf_first_name: 170.5825565912117,
-      surname_l: "Noah ",
-      surname_r: "Noah ",
-      gamma_surname: 1,
-      bf_surname: 127.63746447742344,
-      dob_l: "2008-01-21",
-      dob_r: "2008-03-23",
-      gamma_dob: 0,
-      bf_dob: 0.050185873605948,
-      city_l: "Bolno",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.001122334455667789,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthea78@bwllar-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 0,
-      bf_email: 0.050204346994709714
-    },
-    {
-      match_weight: -3.9304735684905077,
-      match_probability: 0.061549021133449476,
-      unique_id_l: 12,
-      unique_id_r: 6,
-      first_name_l: "Noah ",
-      first_name_r: "Watson",
+      match_weight: -2.599230043972054,
+      match_probability: 0.14165045458783695,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 82,
+      unique_id_r: 79,
+      first_name_l: "Eh na",
+      first_name_r: "Carr",
       gamma_first_name: 0,
-      bf_first_name: 0.025313802295168154,
+      tf_first_name_l: 0.0011111111111111111,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 0.017349943911181373,
+      bf_tf_adj_first_name: 1.0,
+      surname_l: "Carr",
+      surname_r: "Ethan ",
+      gamma_surname: 0,
+      tf_surname_l: 0.0065005417118093175,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 0.01712394347596409,
+      bf_tf_adj_surname: 1.0,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
+    },
+    {
+      match_weight: 11.543499994820714,
+      match_probability: 0.9996651002856178,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 84,
+      unique_id_r: 79,
+      first_name_l: "Carr",
+      first_name_r: "Carr",
+      gamma_first_name: 3,
+      tf_first_name_l: 0.0033333333333333335,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 185.00697674418603,
+      bf_tf_adj_first_name: 1.540482445665154,
+      surname_l: "Ethan ",
+      surname_r: "Ethan ",
+      gamma_surname: 3,
+      tf_surname_l: 0.005417118093174431,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 130.37728776185224,
+      bf_tf_adj_surname: 1.3450962434525533,
+      dob_l: "2012-10-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 0,
+      tf_dob_l: 0.001,
+      tf_dob_r: 0.006,
+      bf_dob: 0.01702393748966431,
+      bf_tf_adj_dob: 1.0,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
+    },
+    {
+      match_weight: -2.599230043972054,
+      match_probability: 0.14165045458783695,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 81,
+      unique_id_r: 79,
+      first_name_l: "Etnah",
+      first_name_r: "Carr",
+      gamma_first_name: 0,
+      tf_first_name_l: 0.0011111111111111111,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 0.017349943911181373,
+      bf_tf_adj_first_name: 1.0,
+      surname_l: "Carr",
+      surname_r: "Ethan ",
+      gamma_surname: 0,
+      tf_surname_l: 0.0065005417118093175,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 0.01712394347596409,
+      bf_tf_adj_surname: 1.0,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
+    },
+    {
+      match_weight: -8.500685372099381,
+      match_probability: 0.0027532228214566905,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 86,
+      unique_id_r: 79,
+      first_name_l: "Ethan ",
+      first_name_r: "Carr",
+      gamma_first_name: 0,
+      tf_first_name_l: 0.008888888888888889,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 0.017349943911181373,
+      bf_tf_adj_first_name: 1.0,
+      surname_l: "Crr",
+      surname_r: "Ethan ",
+      gamma_surname: 0,
+      tf_surname_l: 0.0010834236186348862,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 0.01712394347596409,
+      bf_tf_adj_surname: 1.0,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "Londo",
+      city_r: "London",
+      gamma_city: 0,
+      tf_city_l: 0.004489337822671156,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 0.05510019225081342,
+      bf_tf_adj_city: 1.0
+    },
+    {
+      match_weight: -2.6328441608207083,
+      match_probability: 0.1388411501653245,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 85,
+      unique_id_r: 79,
+      first_name_l: "Ethan ",
+      first_name_r: "Carr",
+      gamma_first_name: 0,
+      tf_first_name_l: 0.008888888888888889,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 0.017349943911181373,
+      bf_tf_adj_first_name: 1.0,
       surname_l: "",
-      surname_r: "Noah ",
+      surname_r: "Ethan ",
       gamma_surname: -1,
+      tf_surname_l: "",
+      tf_surname_r: 0.005417118093174431,
       bf_surname: 1.0,
-      dob_l: "2008-03-23",
-      dob_r: "2008-03-23",
-      gamma_dob: 1,
-      bf_dob: 256.5,
-      city_l: "Blotn",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: 0.001122334455667789,
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: -1,
-      bf_email: 1.0
+      bf_tf_adj_surname: 1.0,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "stacyball@medina.biz",
+      email_r: "stacyball@medina.biz",
+      gamma_email: 2,
+      tf_email_l: 0.009009009009009009,
+      tf_email_r: 0.009009009009009009,
+      bf_email: 257.99222737819025,
+      bf_tf_adj_email: 0.4087332439105659,
+      city_l: "oodLn",
+      city_r: "London",
+      gamma_city: 0,
+      tf_city_l: 0.002244668911335578,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 0.05510019225081342,
+      bf_tf_adj_city: 1.0
     },
     {
-      match_weight: 23.650339626235713,
-      match_probability: 0.9999999240481543,
-      unique_id_l: 6,
-      unique_id_r: 6,
-      first_name_l: "Watson",
-      first_name_r: "Watson",
-      gamma_first_name: 2,
-      bf_first_name: 170.5825565912117,
-      surname_l: "Noah ",
-      surname_r: "Noah ",
-      gamma_surname: 1,
-      bf_surname: 127.63746447742344,
-      dob_l: "2008-03-23",
-      dob_r: "2008-03-23",
-      gamma_dob: 1,
-      bf_dob: 256.5,
-      city_l: "",
-      city_r: "",
-      gamma_city: -1,
-      tf_city_l: "",
-      tf_city_r: "",
-      bf_city: 1.0,
-      bf_tf_adj_city: 1.0,
-      email_l: "matthew78@ballard-mcdonald.net",
-      email_r: "matthew78@ballard-mcdonald.net",
-      gamma_email: 1,
-      bf_email: 233.39775421085463
+      match_weight: -9.319645328878384,
+      match_probability: 0.0015625289718773487,
+      source_dataset_l: "_b",
+      source_dataset_r: "_a",
+      unique_id_l: 83,
+      unique_id_r: 79,
+      first_name_l: "Ethan ",
+      first_name_r: "Carr",
+      gamma_first_name: 0,
+      tf_first_name_l: 0.008888888888888889,
+      tf_first_name_r: 0.0033333333333333335,
+      bf_first_name: 0.017349943911181373,
+      bf_tf_adj_first_name: 1.0,
+      surname_l: "Cra",
+      surname_r: "Ethan ",
+      gamma_surname: 0,
+      tf_surname_l: 0.0010834236186348862,
+      tf_surname_r: 0.005417118093174431,
+      bf_surname: 0.01712394347596409,
+      bf_tf_adj_surname: 1.0,
+      dob_l: "2013-01-21",
+      dob_r: "2013-01-21",
+      gamma_dob: 3,
+      tf_dob_l: 0.006,
+      tf_dob_r: 0.006,
+      bf_dob: 284.4990909090909,
+      bf_tf_adj_dob: 0.5565337057049764,
+      email_l: "",
+      email_r: "stacyball@medina.biz",
+      gamma_email: -1,
+      tf_email_l: "",
+      tf_email_r: 0.009009009009009009,
+      bf_email: 1.0,
+      bf_tf_adj_email: 1.0,
+      city_l: "London",
+      city_r: "London",
+      gamma_city: 1,
+      tf_city_l: 0.2884399551066218,
+      tf_city_r: 0.2884399551066218,
+      bf_city: 10.263374411018484,
+      bf_tf_adj_city: 0.32090613034647414
     }
   ]
   )}
 
-  function _default_splink_settings()
+  function _splink_settings_from_splink()
   {
     return {
       probability_two_random_records_match: 0.01,
-      link_type: "dedupe_only",
+      link_type: "link_only",
       blocking_rules_to_generate_predictions: [
         "l.first_name = r.first_name",
         "l.surname = r.surname"
@@ -8178,21 +8422,30 @@ details p {
             {
               sql_condition: '"first_name_l" = "first_name_r"',
               label_for_charts: "Exact match",
-              u_probability: 0.0055691509084167595
+              u_probability: 0.0051349414855505135,
+              tf_adjustment_column: "first_name",
+              tf_adjustment_weight: 1.0
             },
             {
-              sql_condition: 'levenshtein("first_name_l", "first_name_r") <= 2',
-              label_for_charts: "Levenshtein <= 2",
-              u_probability: 0.006827339018662712
+              sql_condition:
+                'jaro_winkler_similarity("first_name_l", "first_name_r") >= 0.9',
+              label_for_charts: "Jaro_winkler_similarity >= 0.9",
+              u_probability: 0.002763656214814562
+            },
+            {
+              sql_condition:
+                'jaro_winkler_similarity("first_name_l", "first_name_r") >= 0.7',
+              label_for_charts: "Jaro_winkler_similarity >= 0.7",
+              u_probability: 0.03148350336074243
             },
             {
               sql_condition: "ELSE",
               label_for_charts: "All other comparisons",
-              u_probability: 0.9876035100729206
+              u_probability: 0.9606178989388925
             }
           ],
           comparison_description:
-            "Exact match vs. First_Name within levenshtein threshold 2 vs. anything else"
+            "Exact match vs. First_Name within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"
         },
         {
           output_column_name: "surname",
@@ -8205,15 +8458,30 @@ details p {
             {
               sql_condition: '"surname_l" = "surname_r"',
               label_for_charts: "Exact match",
-              u_probability: 0.0074429557488431336
+              u_probability: 0.007286545197467785,
+              tf_adjustment_column: "surname",
+              tf_adjustment_weight: 1.0
+            },
+            {
+              sql_condition:
+                'jaro_winkler_similarity("surname_l", "surname_r") >= 0.9',
+              label_for_charts: "Jaro_winkler_similarity >= 0.9",
+              u_probability: 0.002643079790481699
+            },
+            {
+              sql_condition:
+                'jaro_winkler_similarity("surname_l", "surname_r") >= 0.7',
+              label_for_charts: "Jaro_winkler_similarity >= 0.7",
+              u_probability: 0.016774317940807866
             },
             {
               sql_condition: "ELSE",
               label_for_charts: "All other comparisons",
-              u_probability: 0.9925570442511569
+              u_probability: 0.9732960570712427
             }
           ],
-          comparison_description: "Exact match vs. anything else"
+          comparison_description:
+            "Exact match vs. Surname within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"
         },
         {
           output_column_name: "dob",
@@ -8226,38 +8494,28 @@ details p {
             {
               sql_condition: '"dob_l" = "dob_r"',
               label_for_charts: "Exact match",
-              u_probability: 0.003703703703703704
-            },
-            {
-              sql_condition: "ELSE",
-              label_for_charts: "All other comparisons",
-              u_probability: 0.9962962962962963
-            }
-          ],
-          comparison_description: "Exact match vs. anything else"
-        },
-        {
-          output_column_name: "city",
-          comparison_levels: [
-            {
-              sql_condition: '"city_l" IS NULL OR "city_r" IS NULL',
-              label_for_charts: "Null",
-              is_null_level: true
-            },
-            {
-              sql_condition: '"city_l" = "city_r"',
-              label_for_charts: "Exact match",
-              u_probability: 0.09307809682341518,
-              tf_adjustment_column: "city",
+              u_probability: 0.0033392022342298585,
+              tf_adjustment_column: "dob",
               tf_adjustment_weight: 1.0
             },
             {
+              sql_condition: 'levenshtein("dob_l", "dob_r") <= 1',
+              label_for_charts: "Levenshtein <= 1",
+              u_probability: 0.001403139524686486
+            },
+            {
+              sql_condition: 'levenshtein("dob_l", "dob_r") <= 2',
+              label_for_charts: "Levenshtein <= 2",
+              u_probability: 0.016244038343485857
+            },
+            {
               sql_condition: "ELSE",
               label_for_charts: "All other comparisons",
-              u_probability: 0.9069219031765848
+              u_probability: 0.9790136198975978
             }
           ],
-          comparison_description: "Exact match vs. anything else"
+          comparison_description:
+            "Exact match vs. Dob within levenshtein thresholds 1, 2 vs. anything else"
         },
         {
           output_column_name: "email",
@@ -8270,12 +8528,43 @@ details p {
             {
               sql_condition: '"email_l" = "email_r"',
               label_for_charts: "Exact match",
-              u_probability: 0.004070304803112018
+              u_probability: 0.0036822814766717645,
+              tf_adjustment_column: "email",
+              tf_adjustment_weight: 1.0
+            },
+            {
+              sql_condition: 'levenshtein("email_l", "email_r") <= 2',
+              label_for_charts: "Levenshtein <= 2",
+              u_probability: 0.00035028663699197756
             },
             {
               sql_condition: "ELSE",
               label_for_charts: "All other comparisons",
-              u_probability: 0.995929695196888
+              u_probability: 0.9959674318863363
+            }
+          ],
+          comparison_description:
+            "Exact match vs. Email within levenshtein threshold 2 vs. anything else"
+        },
+        {
+          output_column_name: "city",
+          comparison_levels: [
+            {
+              sql_condition: '"city_l" IS NULL OR "city_r" IS NULL',
+              label_for_charts: "Null",
+              is_null_level: true
+            },
+            {
+              sql_condition: '"city_l" = "city_r"',
+              label_for_charts: "Exact match",
+              u_probability: 0.09256214983057671,
+              tf_adjustment_column: "city",
+              tf_adjustment_weight: 1.0
+            },
+            {
+              sql_condition: "ELSE",
+              label_for_charts: "All other comparisons",
+              u_probability: 0.9074378501694232
             }
           ],
           comparison_description: "Exact match vs. anything else"
@@ -8286,7 +8575,7 @@ details p {
       max_iterations: 10,
       em_convergence: 0.01,
       sql_dialect: "duckdb",
-      linker_uid: "aGxkVY3O"
+      linker_uid: "qBuHfYYN"
     };
   }
 
@@ -8320,37 +8609,30 @@ details p {
   <summary>Click here for instructions for using this tool</summary>
   <p>Use this tool to label which records represent a match to the <mark>original record, which is highlighted in yellow</mark> at the top of the table.</p>
   <p>Subsequent rows are potential matches to the original row.</p>
-  <p>Use the slider on the left hand side to choose a clerical match probability i.e. the probability with which you think the potential match is the same entity as the original record.</p>
+  <p>Use the slider on the left hand side to choose a clerical match probability, which is the probability with which you think the potential match is the same entity as the original record.</p>
   <p>You may also enter notes to explain why you made a particular decision.</p>
   <p>When you're finished labelling, click the download button below the table to export your labels.</p>
 </details>
 `
   )}
 
-  function _draw_header(slt,original_row,d3){return(
+  function _draw_header(slt,original_row,d3,colspan_spec,styling_lookup){return(
   function (table_element, data_with_inputs_clone, cols) {
     // Draw the two table header rows
     let orig_row_clone = slt.cloneDeep(original_row);
     let first_keys = { clerical_match_score: null, notes_input: null };
     orig_row_clone = { ...first_keys, ...orig_row_clone };
 
-    let colspan_spec = [
-      { span: 2, text: "User input", color: "#A9CCE3" },
-      { span: 2, text: "Splink predictions", color: "#E8DAEF" },
-      { span: 100, text: "Source data", color: "#f3f3f3" }
-    ];
+    const table_first_header = table_element.append("tr");
 
-    const table_top_header = table_element.append("tr");
-
-    d3.select(table_top_header.node())
+    d3.select(table_first_header.node())
       .selectAll("th")
       .data(colspan_spec)
       .enter()
       .append("th")
       .attr("colspan", (col) => col.span)
       .text((col) => col.text)
-      .style("font-size", "1.4em")
-      .style("background-color", (col) => col.color);
+      .attr("class", (d) => `${d.css_class} table_header table_first_header`);
 
     const table_second_header = table_element.append("tr");
 
@@ -8361,166 +8643,49 @@ details p {
       match_weight: "Match Weight"
     };
 
-    const colour_lookup = {};
-    let cumulativeCount = 0;
-
-    colspan_spec.forEach((spec) => {
-      for (let i = 0; i < spec.span; i++) {
-        colour_lookup[cumulativeCount] = spec.color;
-        cumulativeCount++;
-      }
-    });
-
     d3.select(table_second_header.node())
       .selectAll("th")
       .data(cols)
       .enter()
       .append("th")
+      .attr(
+        "class",
+        (d, i) =>
+          `${styling_lookup[i].css_class} table_header table_second_header `
+      )
       .text((col) => {
         if (col in column_header_translations) {
           return column_header_translations[col];
         } else {
           return col;
         }
-      })
-      .style("font-size", "1.2em")
-      .style("background-color", (col, i) => {
-        return colour_lookup[i];
       });
   }
   )}
 
-  function _table_interface(slt,data_with_inputs,unique_id_column_name,original_row,draw_header,table_cells_d3_data_mapper,HTMLElement,form_oninput_update_value,redraw_cells,columns_to_highlight_similarity,tooltip,insert_del_differences,leven,jaro_winkler_distance,match_prob_number_format,Event)
-  {
-    let data_with_inputs_clone = slt.cloneDeep(data_with_inputs);
-    const wrapper = slt.d3.create("div").style("overflow-y", "auto");
+  function _render_tooltip_contents(original_row,leven,jaro_winkler_distance,match_prob_number_format,insert_del_differences){return(
+  function (tooltip, cell_data, i) {
+    tooltip
+      .html(() => {
+        let col_name = cell_data["_key"];
 
-    // el is the html node that will be returned and displayed by the interface
-    const el = wrapper.node();
+        // Original row is the first (yellow highlighted) row in the table
+        let original_value = original_row[col_name];
+        let comparison_value = cell_data["_orig_data"][col_name];
 
-    // el.value is the (reactive viewof) value that's exposed by the interfac
-    // i.e. it contains the output data of the interface
-    el.value = {};
-    data_with_inputs_clone.forEach((d) => {
-      let uid = d[unique_id_column_name];
-      d = slt.cloneDeep(d);
-      d["clerical_match_score_value"] = d["clerical_match_score"].value;
-      d["notes_input_value"] = d["notes_input"].value;
-      el.value[uid] = d;
-    });
+        let lev = leven(original_value, comparison_value, false);
+        let jw = jaro_winkler_distance(original_value, comparison_value);
+        jw = match_prob_number_format(jw);
 
-    const table = wrapper.append("table").attr("id", "main-interface-table");
+        let diff_view;
+        console.log("HII");
+        if (lev > 0) {
+          diff_view = insert_del_differences(comparison_value, original_value);
+        } else {
+          diff_view = "";
+        }
 
-    let cols = Object.keys(data_with_inputs_clone[0]);
-    cols = cols.filter((d) => d != "_row_num");
-
-    let orig_row_clone = slt.cloneDeep(original_row);
-    let first_keys = { clerical_match_score: null, notes_input: null };
-    orig_row_clone = { ...first_keys, ...orig_row_clone };
-
-    orig_row_clone["clerical_match_score"] = " ";
-    delete orig_row_clone["match_weight"];
-    delete orig_row_clone["notes"];
-    orig_row_clone["match_probability"] = "Original record 👉 ";
-    delete orig_row_clone["match_weight"];
-
-    let orig_row_data = [orig_row_clone];
-
-    draw_header(table, data_with_inputs_clone, cols);
-
-    const table_original_row = table
-      .selectAll("tr.original_row")
-      .data(orig_row_data)
-      .join("tr")
-      .attr("class", "original_row");
-
-    table_original_row
-      .selectAll("td")
-      .data((d) => Object.values(d))
-      .join("td")
-      .text((d) => d)
-      .style("overflow", "hidden")
-      .style("font-size", "1.2em")
-
-      .style("background-color", "yellow")
-      .attr("colspan", (d, i) => (i === 2 ? 2 : 1));
-
-    let pm_data = [["", "", "Potential matches 	👇"]];
-    const potential_matches_label_row = table
-      .selectAll("tr.potential_matches_label_row")
-      .data(pm_data)
-      .join("tr")
-
-      .attr("class", "potential_matches_label_row")
-      .style("font-size", "1.2em");
-
-    potential_matches_label_row
-      .selectAll("td")
-      .data((d) => d)
-      .join("td")
-      .text((d) => d)
-
-      .attr("colspan", (d, i) => (i === 2 ? 2 : 1));
-
-    const table_rows = table
-      .selectAll("tr.interface_table_rows")
-      .data(data_with_inputs_clone)
-      .join("tr")
-      .attr("class", "interface_table_rows");
-
-    const table_cells = table_rows
-      .selectAll("td")
-      .data(table_cells_d3_data_mapper)
-      .join("td")
-      .style("overflow", "hidden");
-    // .style("text-overflow", "ellipsis");
-
-    // Draw the table cells by appending into the td cells we just created
-    table_cells.append((original_cell_data) => {
-      let td_contents = original_cell_data["_td_contents"];
-      original_cell_data["_key"];
-
-      // If it's a html element, then bind an oninput event
-      // that updates the value
-
-      // Then calls a redraw function that is responsible for the visual appearance
-
-      if (td_contents instanceof HTMLElement) {
-        td_contents.oninput = (event) => {
-          form_oninput_update_value(original_cell_data, el);
-          redraw_cells(data_with_inputs_clone, table, el);
-        };
-
-        return td_contents;
-      } else {
-        return slt.d3.create("p").text(td_contents).node();
-      }
-    });
-
-    table_cells
-      .filter((d, i) => {
-        return columns_to_highlight_similarity.includes(d["_key"]);
-      })
-      .on("mouseover", function (event, d, i) {
-        let col_name = d["_key"];
-        original_row[col_name];
-        d["_orig_data"][col_name];
-
-        tooltip
-          .html((d2) => {
-            let col_name = d["_key"];
-            let original_value = original_row[col_name];
-            let comparison_value = d["_orig_data"][col_name];
-
-            let diff_view = insert_del_differences(
-              comparison_value,
-              original_value
-            );
-
-            let lev = leven(original_value, comparison_value, false);
-            let jw = jaro_winkler_distance(original_value, comparison_value);
-            jw = match_prob_number_format(jw);
-            return `  
+        return `  
               <table>
                 <tr>
                   <td>Original: </td>
@@ -8542,13 +8707,132 @@ details p {
                   <td>Jaro winkler:</td>
                   <td style="font-family:monospace">${jw} </td>
                 </tr>
-              
-
-
               </table>`;
-          })
+      })
+      .style("visibility", "visible");
+  }
+  )}
 
-          .style("visibility", "visible");
+  function _draw_original_row(slt,original_row,match_prob_number_format,styling_lookup){return(
+  function (table) {
+    // Draw the top yellow highlighted row
+    let first_cols = { clerical_match_score: null, notes_input: null };
+    let orig_row_clone = slt.cloneDeep(original_row);
+    orig_row_clone = { ...first_cols, ...orig_row_clone };
+
+    orig_row_clone["match_probability"] = match_prob_number_format(
+      orig_row_clone["match_probability"]
+    );
+    orig_row_clone["match_weight"] = match_prob_number_format(
+      orig_row_clone["match_weight"]
+    );
+
+    orig_row_clone["clerical_match_score"] = "Original record";
+    orig_row_clone["notes_input"] =
+      "(Scores in this row are for an exact match on all columns)";
+
+    let orig_row_data = [orig_row_clone];
+
+    const table_original_row = table
+      .selectAll("tr.original_record")
+      .data(orig_row_data)
+      .join("tr")
+      .attr("class", "original_record_row");
+
+    table_original_row
+      .selectAll("td")
+      .data((d) => Object.entries(d))
+      .join("td")
+      .text((d) => d[1])
+      .attr("class", (d, i) => {
+        debugger;
+        let this_class = `${styling_lookup[i].css_class} original_record_cell col_${d[0]}`;
+        if (i == 2) {
+          this_class += " orig_record_text_with_arrow_cell";
+        }
+        return this_class;
+      });
+  }
+  )}
+
+  function _draw_potential_matches_spacer_row(){return(
+  function (table) {
+    let pm_data = [["Potential matches👇", "", ""]];
+    const potential_matches_spacer_row = table
+      .selectAll("tr.potential_matches_spacer_row")
+      .data(pm_data)
+      .join("tr")
+      .attr("class", "potential_matches_spacer_row");
+
+    potential_matches_spacer_row
+      .selectAll("td")
+      .data((d) => d)
+      .join("td")
+      .text((d) => d)
+      .attr("class", (d, i) => {
+        if (i == 0) {
+          return "potential_matches_text_with_arrow_cell";
+        } else {
+          return "";
+        }
+      });
+  }
+  )}
+
+  function _draw_potential_matches_rows(table_cells_d3_data_mapper,columns_to_highlight_similarity,styling_lookup,HTMLElement,form_oninput_update_value,redraw_potential_match_cells,slt,render_tooltip_contents,tooltip){return(
+  function (table, data_with_inputs_clone, el) {
+    const table_rows = table
+      .selectAll("tr.potential_match_table_row")
+      .data(data_with_inputs_clone)
+      .join("tr")
+      .attr("class", "potential_match_table_row");
+
+    const table_cells = table_rows
+      .selectAll("td")
+      .data(table_cells_d3_data_mapper)
+      .join("td")
+      .style("overflow", "hidden")
+      .attr("class", (d, i) => {
+        let this_class = `col_${d._key}`;
+        let is_comparison_data_col = columns_to_highlight_similarity.includes(
+          d["_key"]
+        );
+
+        if (is_comparison_data_col) {
+          this_class += " potential_match_comparison_data_cell";
+        }
+
+        this_class += ` ${styling_lookup[i].css_class}`;
+        return this_class;
+      });
+
+    // Draw the table cells by appending into the td cells we just created
+    table_cells.append((original_cell_data) => {
+      let td_contents = original_cell_data["_td_contents"];
+      original_cell_data["_key"];
+
+      // If it's a html element, then bind an oninput event
+      // that updates the value
+
+      // Then calls a redraw function that is responsible for the visual appearance
+      if (td_contents instanceof HTMLElement) {
+        td_contents.oninput = (event) => {
+          form_oninput_update_value(original_cell_data, el);
+          redraw_potential_match_cells(data_with_inputs_clone, table, el);
+        };
+
+        return td_contents;
+      } else {
+        return slt.d3.create("p").text(td_contents).node();
+      }
+    });
+
+    table_cells
+      .filter((d, i) => {
+        return columns_to_highlight_similarity.includes(d["_key"]);
+      })
+      .on("mouseover", function (event, d, i) {
+        render_tooltip_contents(tooltip, d, i);
       })
       .on("mousemove", function (event) {
         tooltip
@@ -8558,13 +8842,284 @@ details p {
       .on("mouseout", function (event) {
         tooltip.html(``).style("visibility", "hidden");
       });
+  }
+  )}
+
+  function _fonts(html){return(
+  html`
+
+
+`
+  )}
+
+  function _colspan_spec(){return(
+  [
+    {
+      span: 2,
+      text: "User input",
+      css_class: "user_input_column"
+    },
+    {
+      span: 2,
+      text: "Splink predictions",
+      css_class: "splink_predictions_column"
+    },
+    {
+      span: 100,
+      text: "Source data",
+      css_class: "source_data_column"
+    }
+  ]
+  )}
+
+  function _styling_lookup(colspan_spec)
+  {
+    let lookup = {};
+
+    let cumulativeCount = 0;
+
+    colspan_spec.forEach((spec) => {
+      for (let i = 0; i < spec.span; i++) {
+        lookup[cumulativeCount] = {
+          css_class: spec.css_class
+        };
+        cumulativeCount++;
+      }
+    });
+    return lookup;
+  }
+
+
+  function _styles(html){return(
+  html`
+
+<style>
+
+body {
+  font-family: 'Open Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 2.0em;
+  text-transform: none;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+  
+table#main-interface-table {
+  all: initial;
+  table-layout: fixed;
+  display: table;
+  border-style: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight:400;
+  border-collapse: collapse;
+  overflow: scroll;
+  color: #444;
+}
+
+#main-interface-table td:first-child {
+  max-width: 140px;
+}
+#main-interface-table td:last-child {
+  max-width: 200px;
+}
+
+#main-interface-table tr {
+  border-style: none;
+  border-color: #ddd;
+  border-width: 1px;
+  overflow: hidden;
+}
+
+#main-interface-table td,
+#main-interface-table th {
+  padding: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#main-interface-table td {
+  border-style: none;
+  border-top-style: solid;
+  border-top-color: #ddd;
+  border-bottom-style: solid;
+  border-bottom-color: #ddd;
+  border-width: 1px;
+}
+
+#main-interface-table th {
+  text-align: left;
+}
+
+
+
+.d3-tooltip {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  padding-left: 4px;
+  padding-right: 4px;
+  position: absolute;
+  visibility: hidden;
+  border-radius: 4px;
+  color: #000;
+  background: rgba(255, 255, 255, 1);
+  line-height: 1.3;
+}
+.d3-tooltip p {
+  padding: 1px;
+  margin: 1px;
+}
+
+
+#main-interface-table .table_header {
+  font-weight:600;
+  border-bottom: 2px solid  white;
+  
+  
+}
+
+.table_first_header {
+  color: black;
+font-size: 1.2em;
+
+}
+
+.table_second_header {
+  color: black;
+  
+}
+
+.table_header.user_input_column {
+  background-color: #a9cce3;
+}
+
+.table_header.splink_predictions_column{
+  background-color: #e8daef;
+}
+
+.table_header.source_data_column {
+  background-color: #f3f3f3;
+}
+
+.original_record_cell {
+  background-color: yellow;
+  overflow: hidden;
+}
+
+#main-interface-table td.potential_matches_text_with_arrow_cell {
+  white-space: nowrap;
+  overflow: visible;
+}
+
+
+/* Orignal record */
+
+.original_record_cell.col_notes_input {
+color: #757500;
+font-size: 0.8em;
+}
+
+
+
+
+/* User instructions box */
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+details summary {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0;
+  outline: none;
+  padding: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+details[open] summary {
+  background-color: #e0e0e0;
+}
+
+details p {
+  margin: 8px;
+}
+
+/* Download button */
+#observablehq-dl {
+  padding: 20px;
+  border-radius: 8px;
+
+  background-color: #ffffff;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333333;
+}
+
+
+</style>`
+  )}
+
+  function _checkboxes(slt){return(
+  slt.checkbox(["Enable cell shading", "Enable diff view"], {
+    value: ["Enable cell shading"]
+  })
+  )}
+
+  function _table_interface(slt,data_with_inputs,unique_id_column_name,draw_header,draw_original_row,draw_potential_matches_spacer_row,draw_potential_matches_rows,Event)
+  {
+    let data_with_inputs_clone = slt.cloneDeep(data_with_inputs);
+    const wrapper = slt.d3.create("div").style("overflow-y", "auto");
+
+    // interface is the html node that will be returned and displayed by the interface
+    const interface_node = wrapper.node();
+
+    // interface.value is the (reactive viewof) value that's exposed by the interface
+    // i.e. it contains the output data of the interface
+    interface_node.value = {};
+
+    // Set the value of el.value to a dict like
+    // {'uid_1': row_data, 'uid_2': row_data}
+    data_with_inputs_clone.forEach((d) => {
+      let uid = d[unique_id_column_name];
+      d = slt.cloneDeep(d);
+
+      d["clerical_match_score_value"] = d["clerical_match_score"].value;
+      d["notes_input_value"] = d["notes_input"].value;
+      interface_node.value[uid] = d;
+    });
+
+    const table = wrapper.append("table").attr("id", "main-interface-table");
+
+    let cols = Object.keys(data_with_inputs_clone[0]);
+    cols = cols.filter((d) => d != "_row_num");
+
+    draw_header(table, data_with_inputs_clone, cols);
+
+    draw_original_row(table);
+
+    draw_potential_matches_spacer_row(table);
+
+    draw_potential_matches_rows(table, data_with_inputs_clone, interface_node);
 
     // Trigger an update to reflect the current data
     data_with_inputs_clone[0]["clerical_match_score"].dispatchEvent(
       new Event("input", { bubbles: true })
     );
 
-    return el;
+    return interface_node;
   }
 
 
@@ -8584,13 +9139,15 @@ details p {
     .style("z-index", "10")
   )}
 
-  function _13(md){return(
+  function _22(md){return(
   md`### Styling`
   )}
 
-  function _potential_match_cell_style(original_row,white_green_colour_scale,columns_to_highlight_similarity,leven,white_blue_colour_scale,transitive_highlight_width,padding_with_highlight){return(
+  function _shade_potential_match_cells(original_row,white_green_colour_scale,columns_to_highlight_similarity,leven,white_blue_colour_scale,transitive_highlight_width,padding_with_highlight){return(
   function (d3_data, sel, el) {
-    
+    // The cell additional cell styling
+    // that gives a visual representation of the similarity
+
     let col_name = d3_data["_key"];
     let cell_value = d3_data["_td_contents"];
     let original_value = original_row[col_name];
@@ -8610,6 +9167,7 @@ details p {
       }
     });
 
+    
     if (d3_data["_key"] == "clerical_match_score") {
       sel.style("background-color", (d) => {
         return white_green_colour_scale(d["_td_contents"].value);
@@ -8653,10 +9211,6 @@ details p {
             });
           }
 
-          console.log("---");
-          console.log(cell_value);
-          console.log(transitive_leven_perc);
-
           if (transitive_leven_perc > 0.5) {
             sel.style("border-width", transitive_highlight_width);
             sel.style("padding", padding_with_highlight);
@@ -8676,7 +9230,7 @@ details p {
   }
   )}
 
-  function _redraw_cells(table_cells_d3_data_mapper,slt,potential_match_cell_style){return(
+  function _redraw_potential_match_cells(table_cells_d3_data_mapper,checkboxes,columns_to_highlight_similarity,original_row,insert_del_differences,slt,shade_potential_match_cells){return(
   function (data_with_inputs_clone, table, el) {
     // Controls the visual appearance of the potential matches
     // Does two things:
@@ -8684,7 +9238,7 @@ details p {
     // (2). Highlight transitive matches, dependent on the value of the range inputs
 
     let sel = table
-      .selectAll("tr.interface_table_rows")
+      .selectAll("tr.potential_match_table_row")
       .data(data_with_inputs_clone);
 
     const table_rows = sel.join("tr");
@@ -8692,6 +9246,28 @@ details p {
     const table_cells = table_rows
       .selectAll("td")
       .data(table_cells_d3_data_mapper);
+
+    if (checkboxes.includes("Enable diff view")) {
+      table_cells
+        .filter((d) => {
+          return columns_to_highlight_similarity.includes(d["_key"]);
+        })
+        .join()
+        .html((cell_data) => {
+          let col_name = cell_data["_key"];
+
+          // Original row is the first (yellow highlighted) row in the table
+          let original_value = original_row[col_name];
+          let comparison_value = cell_data["_orig_data"][col_name];
+
+          let diff_view = insert_del_differences(
+            comparison_value,
+            original_value
+          );
+
+          return diff_view;
+        });
+    }
 
     // table_cells.style("background-color", (d) => {
     //   //
@@ -8702,7 +9278,9 @@ details p {
       // Purpose is to call
       // Ensures we can retrieve this to select
       const sel = slt.d3.select(this);
-      potential_match_cell_style(d, sel, el);
+      if (checkboxes.includes("Enable cell shading")) {
+        shade_potential_match_cells(d, sel, el);
+      }
     }
 
     table_cells.each(potential_match_style_each_fn);
@@ -8757,7 +9335,7 @@ details p {
   }
   )}
 
-  function _18(md){return(
+  function _27(md){return(
   md`## Dataflow`
   )}
 
@@ -8781,11 +9359,13 @@ details p {
     } else {
       pcd = globalThis.pairwise_comparison_data_from_splink;
     }
+
+
     return pcd;
   }
 
 
-  function _pairwise_comparison_data_formatted(pairwise_comparison_data,match_prob_number_format)
+  function _pairwise_comparison_data_formatted(pairwise_comparison_data,match_prob_number_format,is_self_match)
   {
     let formatted_data = pairwise_comparison_data.map((d) => {
       return Object.assign({}, d);
@@ -8799,7 +9379,9 @@ details p {
       d["match_probability"] = match_prob_number_format(d["match_probability"]);
     });
 
-    
+    // Apply the filter function to formatted_data
+    formatted_data = formatted_data.filter((d) => !is_self_match(d));
+
     return formatted_data;
   }
 
@@ -8863,210 +9445,11 @@ details p {
   }
 
 
-  function _26(md){return(
+  function _35(md){return(
   md`## Default data`
   )}
 
-  function _default_pairwise_comparison_data_old(slt)
-  {
-    // const data_url =
-    //   "https://gist.githubusercontent.com/RobinL/37865ded0b5d8224f73f84cf1ea36da0/raw/28f232cbe6c2b32bdbf024cef4acb66b044fb4de/00_records_for_observable.csv";
-
-    const data = `match_weight,match_probability,unique_id_l,unique_id_r,first_name_l,first_name_r,gamma_first_name,bf_first_name,surname_l,surname_r,gamma_surname,bf_surname,dob_l,dob_r,gamma_dob,bf_dob,city_l,city_r,gamma_city,tf_city_l,tf_city_r,bf_city,bf_tf_adj_city,email_l,email_r,gamma_email,bf_email
-11.258293846460244,0.9995919263130351,2,0,Rob,Robert,0,0.2374219308977827,Allen,Alan,1,22.60384847607212,1971-06-24,1971-06-24,3,224.62100960803812,London,,-1,0.21279212792127922,,1.0,1.0,roberta25@smith.net,robert255@smith.net,1,206.63645011925308
-13.86852451537379,0.9999331457394093,3,0,Robert,Robert,2,85.5492422084233,Alen,Alan,2,79.15014455822713,1971-06-24,1971-06-24,3,224.62100960803812,Lonon,,-1,0.007380073800738007,,1.0,1.0,,robert255@smith.net,-1,1.0
-18.488304982136434,0.9999972806541177,1,0,Robert,Robert,2,85.5492422084233,Allen,Alan,1,22.60384847607212,1971-05-24,1971-06-24,2,93.5847881395956,,,-1,,,1.0,1.0,roberta25@smith.net,robert255@smith.net,1,206.63645011925308
-98.488304982136434,0.999999999972806541177,7,0,Robert,Robert,2,85.5492422084233,Allen,Alan,1,22.60384847607212,1971-05-24,1971-06-24,2,93.5847881395956,,,-1,,,1.0,1.0,roberta25@smith.net,robert255@smith.net,1,206.63645011925308`;
-    return slt.d3.csvParse(data);
-  }
-
-
-  function _default_splink_settings_data_old()
-  {
-    // return slt.d3.json(
-    //   "https://gist.githubusercontent.com/RobinL/37865ded0b5d8224f73f84cf1ea36da0/raw/93f65a1801a3ae4b2bbe298ac01a473d10a2d3e1/01_splink_settings.json"
-    // );
-
-    const data = `{
-    "probability_two_random_records_match": 0.009738088021208104,
-    "link_type": "dedupe_only",
-    "comparisons": [
-        {
-            "output_column_name": "first_name",
-            "comparison_levels": [
-                {
-                    "sql_condition": "first_name_l IS NULL OR first_name_r IS NULL",
-                    "label_for_charts": "Null",
-                    "is_null_level": true
-                },
-                {
-                    "sql_condition": "first_name_l = first_name_r",
-                    "label_for_charts": "Exact match",
-                    "m_probability": 0.49563564273680927,
-                    "u_probability": 0.0057935713975033705
-                },
-                {
-                    "sql_condition": "levenshtein(first_name_l, first_name_r) <= 2",
-                    "label_for_charts": "levenshtein <= 2",
-                    "m_probability": 0.27072063394450885,
-                    "u_probability": 0.010119901990634016
-                },
-                {
-                    "sql_condition": "ELSE",
-                    "label_for_charts": "All other comparisons",
-                    "m_probability": 0.23364372331868066,
-                    "u_probability": 0.9840865266118626
-                }
-            ],
-            "comparison_description": "Exact match vs. levenshtein at threshold 2 vs. anything else"
-        },
-        {
-            "output_column_name": "surname",
-            "comparison_levels": [
-                {
-                    "sql_condition": "surname_l IS NULL OR surname_r IS NULL",
-                    "label_for_charts": "Null",
-                    "is_null_level": true
-                },
-                {
-                    "sql_condition": "surname_l = surname_r",
-                    "label_for_charts": "Exact match",
-                    "m_probability": 0.4409309402659144,
-                    "u_probability": 0.004889975550122249
-                },
-                {
-                    "sql_condition": "levenshtein(surname_l, surname_r) <= 1",
-                    "label_for_charts": "levenshtein <= 1",
-                    "m_probability": 0.187141318174158,
-                    "u_probability": 0.002364383782476692
-                },
-                {
-                    "sql_condition": "levenshtein(surname_l, surname_r) <= 2",
-                    "label_for_charts": "levenshtein <= 2",
-                    "m_probability": 0.11323146703102362,
-                    "u_probability": 0.005009388872469557
-                },
-                {
-                    "sql_condition": "ELSE",
-                    "label_for_charts": "All other comparisons",
-                    "m_probability": 0.2586962745289042,
-                    "u_probability": 0.9877362517949315
-                }
-            ],
-            "comparison_description": "Exact match vs. levenshtein at thresholds 1, 2 vs. anything else"
-        },
-        {
-            "output_column_name": "dob",
-            "comparison_levels": [
-                {
-                    "sql_condition": "dob_l IS NULL OR dob_r IS NULL",
-                    "label_for_charts": "Null",
-                    "is_null_level": true
-                },
-                {
-                    "sql_condition": "dob_l = dob_r",
-                    "label_for_charts": "Exact match",
-                    "m_probability": 0.39258086363927386,
-                    "u_probability": 0.0017477477477477479
-                },
-                {
-                    "sql_condition": "levenshtein(dob_l, dob_r) <= 1",
-                    "label_for_charts": "levenshtein <= 1",
-                    "m_probability": 0.14988554656992287,
-                    "u_probability": 0.0016016016016016017
-                },
-                {
-                    "sql_condition": "levenshtein(dob_l, dob_r) <= 2",
-                    "label_for_charts": "levenshtein <= 2",
-                    "m_probability": 0.2067443495092833,
-                    "u_probability": 0.015517517517517518
-                },
-                {
-                    "sql_condition": "ELSE",
-                    "label_for_charts": "All other comparisons",
-                    "m_probability": 0.25078924028151967,
-                    "u_probability": 0.9811331331331331
-                }
-            ],
-            "comparison_description": "Exact match vs. levenshtein at thresholds 1, 2 vs. anything else"
-        },
-        {
-            "output_column_name": "city",
-            "comparison_levels": [
-                {
-                    "sql_condition": "city_l IS NULL OR city_r IS NULL",
-                    "label_for_charts": "Null",
-                    "is_null_level": true
-                },
-                {
-                    "sql_condition": "city_l = city_r",
-                    "label_for_charts": "Exact match",
-                    "m_probability": 0.5656846255360627,
-                    "u_probability": 0.0551475711801453,
-                    "tf_adjustment_column": "city",
-                    "tf_adjustment_weight": 1.0
-                },
-                {
-                    "sql_condition": "ELSE",
-                    "label_for_charts": "All other comparisons",
-                    "m_probability": 0.43431537446393775,
-                    "u_probability": 0.9448524288198547
-                }
-            ],
-            "comparison_description": "Exact match vs. anything else"
-        },
-        {
-            "output_column_name": "email",
-            "comparison_levels": [
-                {
-                    "sql_condition": "email_l IS NULL OR email_r IS NULL",
-                    "label_for_charts": "Null",
-                    "is_null_level": true
-                },
-                {
-                    "sql_condition": "email_l = email_r",
-                    "label_for_charts": "Exact match",
-                    "m_probability": 0.5603584650366957,
-                    "u_probability": 0.0021938713143283602
-                },
-                {
-                    "sql_condition": "levenshtein(email_l, email_r) <= 1",
-                    "label_for_charts": "levenshtein <= 1",
-                    "m_probability": 0.17269329250389986,
-                    "u_probability": 0.0007334349848487773
-                },
-                {
-                    "sql_condition": "levenshtein(email_l, email_r) <= 2",
-                    "label_for_charts": "levenshtein <= 2",
-                    "m_probability": 0.12828947158266213,
-                    "u_probability": 0.000620846281034272
-                },
-                {
-                    "sql_condition": "ELSE",
-                    "label_for_charts": "All other comparisons",
-                    "m_probability": 0.13865877087674205,
-                    "u_probability": 0.9964518474197885
-                }
-            ],
-            "comparison_description": "Exact match vs. levenshtein at thresholds 1, 2 vs. anything else"
-        }
-    ],
-    "blocking_rules_to_generate_predictions": [
-        "l.first_name = r.first_name",
-        "l.surname = r.surname"
-    ],
-    "retain_matching_columns": true,
-    "retain_intermediate_calculation_columns": true,
-    "additional_columns_to_retain": [
-        "cluster"
-    ],
-    "sql_dialect": "duckdb"
-}`;
-    return JSON.parse(data);
-  }
-
-
-  function _29(md){return(
+  function _36(md){return(
   md`## Derived constants `
   )}
 
@@ -9124,8 +9507,36 @@ details p {
   }
 
 
-  function _36(md){return(
+  function _43(md){return(
   md`## Pure functions`
+  )}
+
+  function _is_self_match(pairwise_comparison_data,source_dataset_column_name,unique_id_column_name){return(
+  function (record) {
+    // Since splink uses `linker.find_matches_to_new_records` under the hood, and this method
+    // assumes it's a new, not an existing record, we need to filter out the 'self match'
+
+    let example_row = pairwise_comparison_data[0];
+
+    // Check if source_dataset_column_name is a key in the firstComparisonRow
+    const sourceDatasetColumnExists = source_dataset_column_name in example_row;
+
+    if (sourceDatasetColumnExists) {
+      // Filter out records with both source_dataset_column_name and unique_id_column_name equal to those in the example_row
+      return (
+        record[`${source_dataset_column_name}_l`] ==
+          record[`${source_dataset_column_name}_r`] &&
+        record[`${unique_id_column_name}_l`] ==
+          example_row[`${unique_id_column_name}_r`]
+      );
+    } else {
+      // Filter out records with unique_id_column_name equal to that in the example_row
+      return (
+        record[`${unique_id_column_name}_l`] ==
+        example_row[`${unique_id_column_name}_r`]
+      );
+    }
+  }
   )}
 
   function _get_output_columns(){return(
@@ -9216,9 +9627,10 @@ details p {
   }
   )}
 
-  function _get_original_record(transform_pairwise_comparison_to_label_format){return(
+  function _get_original_record(is_self_match,transform_pairwise_comparison_to_label_format){return(
   function (find_matches_data, suffix, unique_id_colname) {
-    let first_record = find_matches_data[0];
+    debugger;
+    let first_record = find_matches_data.filter((d) => is_self_match(d))[0];
     return transform_pairwise_comparison_to_label_format(
       first_record,
       suffix,
@@ -9244,7 +9656,6 @@ details p {
     let sorted_data = label_format_data.sort((a, b) => {
       return parseFloat(b.match_weight) - parseFloat(a.match_weight);
     });
-
 
     return sorted_data;
   }
@@ -9398,15 +9809,12 @@ details p {
 
       return `<span style="background: ${bgc}; color: ${textc}">${p.value}</span>`;
     }
-    if (diffs.length == 1) {
-      return "";
-    }
 
     return `${diffs.map((part) => get_span(part)).join("")}`;
   }
   )}
 
-  function _46(md){return(
+  function _54(md){return(
   md`### Formatting`
   )}
 
@@ -9437,7 +9845,7 @@ details p {
     .range(["white", "rgb(143, 200, 255)", "dodgerblue"])
   )}
 
-  function _51(md){return(
+  function _59(md){return(
   md`## Constants`
   )}
 
@@ -9457,7 +9865,7 @@ details p {
   }
 
 
-  function _55(md){return(
+  function _63(md){return(
   md`## Embedding things
 `
   )}
@@ -9466,29 +9874,11 @@ details p {
   "http://127.0.0.1:8080/dist/slt.js"
   )}
 
-  function _57(md){return(
+  function _65(md){return(
   md`## TODO:
 
-- hover-over that displays the original value and the cell value, with one or more difference metrics.  Put this into functinos.
+
 - The nested join \`.data()\` call for the table cells (\`td\`) is where we should compute the direct and transitive matches and provide data to the cells accordingly.  e.g. data could be a dict like \`{value:, direct_matchiness: 0.8, indirect_matchiness: 0.7}\`
-`
-  )}
-
-  function _58(md){return(
-  md`
-v 1635 before tooltip
-
-[Refactor redraw vs dealing with events](https://observablehq.com/d/0420fc5db15e44ab@580)
-
-
-a [Working version](https://api.observablehq.com/d/0420fc5db15e44ab@130.tgz?v=3): sets the colour of the cell based on the slider
-
-
-[Working version](https://api.observablehq.com/d/0420fc5db15e44ab@243.tgz?v=3): interface produces correct value
-
-
-[Working version](https://api.observablehq.com/d/0420fc5db15e44ab@496.tgz?v=3) with better update pattern
-
 `
   )}
 
@@ -9496,64 +9886,72 @@ a [Working version](https://api.observablehq.com/d/0420fc5db15e44ab@130.tgz?v=3)
     const main = runtime.module();
     main.variable(observer()).define(["md"], _1);
     main.variable(observer("default_pairwise_comparison_data")).define("default_pairwise_comparison_data", _default_pairwise_comparison_data);
-    main.variable(observer("default_splink_settings")).define("default_splink_settings", _default_splink_settings);
+    main.variable(observer("splink_settings_from_splink")).define("splink_settings_from_splink", _splink_settings_from_splink);
     main.variable(observer("viewof refresh")).define("viewof refresh", ["Inputs"], _refresh);
     main.variable(observer("refresh")).define("refresh", ["Generators", "viewof refresh"], (G, _) => G.input(_));
     main.variable(observer("slt")).define("slt", ["globalThis","require","localUrl","refresh"], _slt);
     main.variable(observer("in_csv")).define("in_csv", _in_csv);
     main.variable(observer("in_settings")).define("in_settings", _in_settings);
     main.variable(observer("blurb")).define("blurb", ["html"], _blurb);
-    main.variable(observer("draw_header")).define("draw_header", ["slt","original_row","d3"], _draw_header);
-    main.variable(observer("viewof table_interface")).define("viewof table_interface", ["slt","data_with_inputs","unique_id_column_name","original_row","draw_header","table_cells_d3_data_mapper","HTMLElement","form_oninput_update_value","redraw_cells","columns_to_highlight_similarity","tooltip","insert_del_differences","leven","jaro_winkler_distance","match_prob_number_format","Event"], _table_interface);
+    main.variable(observer("draw_header")).define("draw_header", ["slt","original_row","d3","colspan_spec","styling_lookup"], _draw_header);
+    main.variable(observer("render_tooltip_contents")).define("render_tooltip_contents", ["original_row","leven","jaro_winkler_distance","match_prob_number_format","insert_del_differences"], _render_tooltip_contents);
+    main.variable(observer("draw_original_row")).define("draw_original_row", ["slt","original_row","match_prob_number_format","styling_lookup"], _draw_original_row);
+    main.variable(observer("draw_potential_matches_spacer_row")).define("draw_potential_matches_spacer_row", _draw_potential_matches_spacer_row);
+    main.variable(observer("draw_potential_matches_rows")).define("draw_potential_matches_rows", ["table_cells_d3_data_mapper","columns_to_highlight_similarity","styling_lookup","HTMLElement","form_oninput_update_value","redraw_potential_match_cells","slt","render_tooltip_contents","tooltip"], _draw_potential_matches_rows);
+    main.variable(observer("fonts")).define("fonts", ["html"], _fonts);
+    main.variable(observer("colspan_spec")).define("colspan_spec", _colspan_spec);
+    main.variable(observer("styling_lookup")).define("styling_lookup", ["colspan_spec"], _styling_lookup);
+    main.variable(observer("styles")).define("styles", ["html"], _styles);
+    main.variable(observer("viewof checkboxes")).define("viewof checkboxes", ["slt"], _checkboxes);
+    main.variable(observer("checkboxes")).define("checkboxes", ["Generators", "viewof checkboxes"], (G, _) => G.input(_));
+    main.variable(observer("viewof table_interface")).define("viewof table_interface", ["slt","data_with_inputs","unique_id_column_name","draw_header","draw_original_row","draw_potential_matches_spacer_row","draw_potential_matches_rows","Event"], _table_interface);
     main.variable(observer("table_interface")).define("table_interface", ["Generators", "viewof table_interface"], (G, _) => G.input(_));
     main.variable(observer("dl")).define("dl", ["DOM","slt","output_data"], _dl);
     main.variable(observer("tooltip")).define("tooltip", ["slt"], _tooltip);
-    main.variable(observer()).define(["md"], _13);
-    main.variable(observer("potential_match_cell_style")).define("potential_match_cell_style", ["original_row","white_green_colour_scale","columns_to_highlight_similarity","leven","white_blue_colour_scale","transitive_highlight_width","padding_with_highlight"], _potential_match_cell_style);
-    main.variable(observer("redraw_cells")).define("redraw_cells", ["table_cells_d3_data_mapper","slt","potential_match_cell_style"], _redraw_cells);
+    main.variable(observer()).define(["md"], _22);
+    main.variable(observer("shade_potential_match_cells")).define("shade_potential_match_cells", ["original_row","white_green_colour_scale","columns_to_highlight_similarity","leven","white_blue_colour_scale","transitive_highlight_width","padding_with_highlight"], _shade_potential_match_cells);
+    main.variable(observer("redraw_potential_match_cells")).define("redraw_potential_match_cells", ["table_cells_d3_data_mapper","checkboxes","columns_to_highlight_similarity","original_row","insert_del_differences","slt","shade_potential_match_cells"], _redraw_potential_match_cells);
     main.variable(observer("table_cells_d3_data_mapper")).define("table_cells_d3_data_mapper", _table_cells_d3_data_mapper);
     main.variable(observer("form_oninput_update_value")).define("form_oninput_update_value", ["Event"], _form_oninput_update_value);
-    main.variable(observer()).define(["md"], _18);
+    main.variable(observer()).define(["md"], _27);
     main.variable(observer("splink_settings")).define("splink_settings", ["globalThis","default_pairwise_comparison_data"], _splink_settings);
     main.variable(observer("pairwise_comparison_data")).define("pairwise_comparison_data", ["globalThis","default_pairwise_comparison_data"], _pairwise_comparison_data);
-    main.variable(observer("pairwise_comparison_data_formatted")).define("pairwise_comparison_data_formatted", ["pairwise_comparison_data","match_prob_number_format"], _pairwise_comparison_data_formatted);
+    main.variable(observer("pairwise_comparison_data_formatted")).define("pairwise_comparison_data_formatted", ["pairwise_comparison_data","match_prob_number_format","is_self_match"], _pairwise_comparison_data_formatted);
     main.variable(observer("original_row")).define("original_row", ["get_original_record","pairwise_comparison_data","original_record_suffix","unique_id_column_name"], _original_row);
     main.variable(observer("potential_matches_data")).define("potential_matches_data", ["get_potential_matches","pairwise_comparison_data_formatted","comparison_records_suffix","unique_id_column_name"], _potential_matches_data);
     main.variable(observer("data_with_inputs")).define("data_with_inputs", ["potential_matches_data","slt"], _data_with_inputs);
     main.variable(observer("output_data")).define("output_data", ["table_interface","original_row"], _output_data);
-    main.variable(observer()).define(["md"], _26);
-    main.variable(observer("default_pairwise_comparison_data_old")).define("default_pairwise_comparison_data_old", ["slt"], _default_pairwise_comparison_data_old);
-    main.variable(observer("default_splink_settings_data_old")).define("default_splink_settings_data_old", _default_splink_settings_data_old);
-    main.variable(observer()).define(["md"], _29);
+    main.variable(observer()).define(["md"], _35);
+    main.variable(observer()).define(["md"], _36);
     main.variable(observer("comparison_records_suffix")).define("comparison_records_suffix", ["get_suffix_of_comparison_records_l_or_r","pairwise_comparison_data","unique_id_column_name"], _comparison_records_suffix);
     main.variable(observer("original_record_suffix")).define("original_record_suffix", ["get_suffix_of_original_record_l_or_r","pairwise_comparison_data","unique_id_column_name"], _original_record_suffix);
     main.variable(observer("unique_id_column_name")).define("unique_id_column_name", ["splink_settings"], _unique_id_column_name);
     main.variable(observer("source_dataset_column_name")).define("source_dataset_column_name", ["splink_settings"], _source_dataset_column_name);
     main.variable(observer("columns_to_highlight_similarity")).define("columns_to_highlight_similarity", ["unique_id_column_name","source_dataset_column_name","additional_columns_to_retain","pairwise_comparison_data"], _columns_to_highlight_similarity);
     main.variable(observer("additional_columns_to_retain")).define("additional_columns_to_retain", ["splink_settings"], _additional_columns_to_retain);
-    main.variable(observer()).define(["md"], _36);
+    main.variable(observer()).define(["md"], _43);
+    main.variable(observer("is_self_match")).define("is_self_match", ["pairwise_comparison_data","source_dataset_column_name","unique_id_column_name"], _is_self_match);
     main.variable(observer("get_output_columns")).define("get_output_columns", _get_output_columns);
     main.variable(observer("get_suffix_of_original_record_l_or_r")).define("get_suffix_of_original_record_l_or_r", _get_suffix_of_original_record_l_or_r);
     main.variable(observer("get_suffix_of_comparison_records_l_or_r")).define("get_suffix_of_comparison_records_l_or_r", ["get_suffix_of_original_record_l_or_r"], _get_suffix_of_comparison_records_l_or_r);
     main.variable(observer("transform_pairwise_comparison_to_label_format")).define("transform_pairwise_comparison_to_label_format", _transform_pairwise_comparison_to_label_format);
-    main.variable(observer("get_original_record")).define("get_original_record", ["transform_pairwise_comparison_to_label_format"], _get_original_record);
+    main.variable(observer("get_original_record")).define("get_original_record", ["is_self_match","transform_pairwise_comparison_to_label_format"], _get_original_record);
     main.variable(observer("get_potential_matches")).define("get_potential_matches", ["transform_pairwise_comparison_to_label_format"], _get_potential_matches);
     main.variable(observer("leven")).define("leven", _leven);
     main.variable(observer("jaro_winkler_distance")).define("jaro_winkler_distance", ["slt"], _jaro_winkler_distance);
     main.variable(observer("insert_del_differences")).define("insert_del_differences", ["slt"], _insert_del_differences);
-    main.variable(observer()).define(["md"], _46);
+    main.variable(observer()).define(["md"], _54);
     main.variable(observer("match_prob_number_format")).define("match_prob_number_format", _match_prob_number_format);
     main.variable(observer("red_orange_green_colour_scale")).define("red_orange_green_colour_scale", ["slt"], _red_orange_green_colour_scale);
     main.variable(observer("white_green_colour_scale")).define("white_green_colour_scale", ["slt"], _white_green_colour_scale);
     main.variable(observer("white_blue_colour_scale")).define("white_blue_colour_scale", ["slt"], _white_blue_colour_scale);
-    main.variable(observer()).define(["md"], _51);
+    main.variable(observer()).define(["md"], _59);
     main.variable(observer("table_cell_padding")).define("table_cell_padding", _table_cell_padding);
     main.variable(observer("transitive_highlight_width")).define("transitive_highlight_width", _transitive_highlight_width);
     main.variable(observer("padding_with_highlight")).define("padding_with_highlight", ["table_cell_padding","transitive_highlight_width"], _padding_with_highlight);
-    main.variable(observer()).define(["md"], _55);
+    main.variable(observer()).define(["md"], _63);
     main.variable(observer("localUrl")).define("localUrl", _localUrl);
-    main.variable(observer()).define(["md"], _57);
-    main.variable(observer()).define(["md"], _58);
+    main.variable(observer()).define(["md"], _65);
     return main;
   }
 
@@ -30659,6 +31057,7 @@ a [Working version](https://api.observablehq.com/d/0420fc5db15e44ab@130.tgz?v=3)
   exports.Inspector = Inspector;
   exports.Runtime = Runtime;
   exports.buffer = buffer;
+  exports.checkbox = checkbox;
   exports.cloneDeep = lodash_clonedeep;
   exports.d3 = index;
   exports.define = define$1;
@@ -30678,14 +31077,14 @@ a [Working version](https://api.observablehq.com/d/0420fc5db15e44ab@130.tgz?v=3)
 
     new slt.Runtime().module(slt.define, name => {
 
+        if (name === "styles") return new slt.Inspector(document.querySelector("#observablehq-styles"));
+        if (name === "viewof checkboxes") return new slt.Inspector(document.querySelector("#observablehq-checkboxes"));
         if (name === "viewof table_interface") return new slt.Inspector(document.querySelector("#observablehq-table-interface"));
-
         if (name === "dl") return new slt.Inspector(document.querySelector("#observablehq-dl"));
         if (name === "blurb") return new slt.Inspector(document.querySelector("#observablehq-blurb"));
 
     })
 </script>
-    
 
 
 </body>
