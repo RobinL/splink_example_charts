@@ -25,8 +25,14 @@
         <h1>Splink Clerical Labelling Tool</h1>
         <div id="observablehq-blurb"></div>
         <div id="observablehq-checkboxes"></div>
+        <div id="observablehq-show_splink_predictions_in_interface"></div>
+        <div id="observablehq-existing_labels_csv"></div>
         <div id="observablehq-table-interface"></div>
         <div id="observablehq-dl"></div>
+        <div id="observablehq-copy_to_clipboard_button"></div>
+
+
+
 
     </div>
 
@@ -35,13 +41,13 @@
 
 
     <script>
-        pairwise_comparison_data_from_splink = [{"match_weight": -8.615669913973383, "match_probability": 0.0025428408225983776, "unique_id_l": "Q20379060-5", "unique_id_r": "Q52155443-1", "first_name_l": "charles", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.02407396408703055, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "burrows", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 0.0005427349499598376, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.01698375177343176, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.5283880174752227, "match_probability": 0.07975414107842767, "unique_id_l": "Q16198937-6", "unique_id_r": "Q52155443-1", "first_name_l": "", "first_name_r": "cyril", "gamma_first_name": -1, "tf_first_name_l": "", "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 1.0, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -9.5335220940977, "match_probability": 0.0013475294521778283, "unique_id_l": "Q16063600-4", "unique_id_r": "Q52155443-1", "first_name_l": "francis", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.009186117875314289, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "dunhan", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.01698375177343176, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6hu", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "cricketer", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": 0.121001225829412, "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-1", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-2", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-3", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 23.693023748659826, "match_probability": 0.9999999262623773, "unique_id_l": "Q52155443-4", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-5", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.19084374404047819, "match_probability": 0.4669774396177109, "unique_id_l": "Q52155443-7", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransom", "surname_r": "ransome", "gamma_surname": 2, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 30.022420634920657, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "ba4 6at", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025016071704776904, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.8569704275345944, "match_probability": 0.06455841808094122, "unique_id_l": "Q52155443-10", "unique_id_r": "Q52155443-1", "first_name_l": "ransom", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017358737683847932, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "1821-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.0016081684747925973, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.8686522668466651, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 28.008655985293505, "match_probability": 0.9999999962969941, "unique_id_l": "Q52155443-6", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -6.948765002764115, "match_probability": 0.008029932029665366, "unique_id_l": "Q52155443-14", "unique_id_r": "Q52155443-1", "first_name_l": "cyeil", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "sn3 4rt", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.025016071704776904, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 12.558086653025345, "match_probability": 0.9998342066067741, "unique_id_l": "Q52155443-12", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 19.347314994639657, "match_probability": 0.9999985007391519, "unique_id_l": "Q52155443-13", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1852-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.005488194001276325, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.8686522668466651, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.2206352368472217, "match_probability": 0.4618411707936465, "unique_id_l": "Q52155443-15", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lq", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.05021867461609371, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-8", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-11", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 5619.0690476190475, "bf_tf_adj_postcode_fake": 0.661931712972281, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 25.465144965531376, "match_probability": 0.9999999784112492, "unique_id_l": "Q52155443-9", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 70.35786802030456, "bf_tf_adj_first_name": 24.357845393126407, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 493.1346218487394, "bf_tf_adj_dob": 0.2023290694837995, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 218.1677130044843, "bf_tf_adj_birth_place": 2.9242464206105536, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 4.0949969997864555, "match_probability": 0.9447178178774029, "unique_id_l": "Q52155443-16", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7620815981911596, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1391.1033870967742, "bf_tf_adj_surname": 2.2469239888430574, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 52.81079931972794, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}];
+        pairwise_comparison_data_from_splink = [{"match_weight": -8.615901963465769, "match_probability": 0.0025424328934284517, "unique_id_l": "Q20379060-5", "unique_id_r": "Q52155443-1", "first_name_l": "charles", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.02407396408703055, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017351955139287716, "bf_tf_adj_first_name": 1.0, "surname_l": "burrows", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 0.0005427349499598376, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.016987657804143446, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.5283880174752227, "match_probability": 0.07975414107842767, "unique_id_l": "Q16198937-6", "unique_id_r": "Q52155443-1", "first_name_l": "", "first_name_r": "cyril", "gamma_first_name": -1, "tf_first_name_l": "", "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 1.0, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -9.661930476494156, "match_probability": 0.0012329155547605314, "unique_id_l": "Q16063600-4", "unique_id_r": "Q52155443-1", "first_name_l": "francis", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 0.009186117875314289, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017351955139287716, "bf_tf_adj_first_name": 1.0, "surname_l": "dunhan", "surname_r": "ransome", "gamma_surname": 0, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 0.016987657804143446, "bf_tf_adj_surname": 1.0, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6hu", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 48.32121212121217, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "cricketer", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": 0.121001225829412, "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-1", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-2", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-3", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 23.695902067054966, "match_probability": 0.9999999264093444, "unique_id_l": "Q52155443-4", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.050318965819598535, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 37.32601467527963, "match_probability": 0.9999999999941956, "unique_id_l": "Q52155443-5", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.1871192235220739, "match_probability": 0.46762008901997093, "unique_id_l": "Q52155443-7", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransom", "surname_r": "ransome", "gamma_surname": 2, "tf_surname_l": 2.1709397998393504e-05, "tf_surname_r": 0.00030393157197750904, "bf_surname": 30.039606126914688, "bf_tf_adj_surname": 1.0, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "ba4 6at", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.02501642904830055, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.050318965819598535, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-8", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 30.68540142273134, "match_probability": 0.9999999994208731, "unique_id_l": "Q52155443-11", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 25.465144965531376, "match_probability": 0.9999999784112492, "unique_id_l": "Q52155443-9", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": -1, "tf_postcode_fake_l": "", "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 1.0, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -0.3687157983398782, "match_probability": 0.43645194886616107, "unique_id_l": "Q52155443-15", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7501415904554113, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lq", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 48.32121212121217, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.050318965819598535, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -3.9914217802174625, "match_probability": 0.05915358282980866, "unique_id_l": "Q52155443-10", "unique_id_r": "Q52155443-1", "first_name_l": "ransom", "first_name_r": "cyril", "gamma_first_name": 0, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.017351955139287716, "bf_tf_adj_first_name": 1.0, "surname_l": "", "surname_r": "ransome", "gamma_surname": -1, "tf_surname_l": "", "tf_surname_r": 0.00030393157197750904, "bf_surname": 1.0, "bf_tf_adj_surname": 1.0, "dob_l": "1821-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.0016081684747925973, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.865220323741008, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 48.32121212121217, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 28.008655985293505, "match_probability": 0.9999999962969941, "unique_id_l": "Q52155443-6", "unique_id_r": "Q52155443-1", "first_name_l": "cyril", "first_name_r": "cyril", "gamma_first_name": 3, "tf_first_name_l": 0.0005543346993724139, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 72.69546961325966, "bf_tf_adj_first_name": 23.57459248211501, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": -6.971526941634243, "match_probability": 0.007905228646791808, "unique_id_l": "Q52155443-14", "unique_id_r": "Q52155443-1", "first_name_l": "cyeil", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 1.979766783472907e-05, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7501415904554113, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "sn3 4rt", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 0, "tf_postcode_fake_l": 2.5541479362484675e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 0.02501642904830055, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 12.53818242443676, "match_probability": 0.9998319037636598, "unique_id_l": "Q52155443-12", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7501415904554113, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1851-01-01", "dob_r": "1851-01-01", "gamma_dob": 3, "tf_dob_l": 0.009521378430121252, "tf_dob_r": 0.009521378430121252, "bf_dob": 478.1266346992153, "bf_tf_adj_dob": 0.20868000635787326, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "bitton", "birth_place_r": "south gloucestershire", "gamma_birth_place": 0, "tf_birth_place_l": 0.00011454491306041099, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 0.050318965819598535, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 19.31882123935598, "match_probability": 0.9999984708338987, "unique_id_l": "Q52155443-13", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7501415904554113, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "1852-01-01", "dob_r": "1851-01-01", "gamma_dob": 2, "tf_dob_l": 0.005488194001276325, "tf_dob_r": 0.009521378430121252, "bf_dob": 0.865220323741008, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6ll", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 2, "tf_postcode_fake_l": 0.00025541479362484675, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 6816.915, "bf_tf_adj_postcode_fake": 0.5456192427219644, "birth_place_l": "south gloucestershire", "birth_place_r": "south gloucestershire", "gamma_birth_place": 1, "tf_birth_place_l": 0.001489083869785343, "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 149.8687777542821, "bf_tf_adj_birth_place": 4.256898357389355, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}, {"match_weight": 3.94403811989866, "match_probability": 0.9389918250753877, "unique_id_l": "Q52155443-16", "unique_id_r": "Q52155443-1", "first_name_l": "cy", "first_name_r": "cyril", "gamma_first_name": 1, "tf_first_name_l": 0.00015838134267783256, "tf_first_name_r": 0.0005543346993724139, "bf_first_name": 0.7501415904554113, "bf_tf_adj_first_name": 1.0, "surname_l": "ransome", "surname_r": "ransome", "gamma_surname": 3, "tf_surname_l": 0.00030393157197750904, "tf_surname_r": 0.00030393157197750904, "bf_surname": 1399.824150268336, "bf_tf_adj_surname": 2.2329258791751783, "dob_l": "", "dob_r": "1851-01-01", "gamma_dob": -1, "tf_dob_l": "", "tf_dob_r": 0.009521378430121252, "bf_dob": 1.0, "bf_tf_adj_dob": 1.0, "postcode_fake_l": "bs30 6lw", "postcode_fake_r": "bs30 6ll", "gamma_postcode_fake": 1, "tf_postcode_fake_l": 5.108295872496935e-05, "tf_postcode_fake_r": 0.00025541479362484675, "bf_postcode_fake": 48.32121212121217, "bf_tf_adj_postcode_fake": 1.0, "birth_place_l": "", "birth_place_r": "south gloucestershire", "gamma_birth_place": -1, "tf_birth_place_l": "", "tf_birth_place_r": 0.001489083869785343, "bf_birth_place": 1.0, "bf_tf_adj_birth_place": 1.0, "occupation_l": "", "occupation_r": "", "gamma_occupation": -1, "tf_occupation_l": "", "tf_occupation_r": "", "bf_occupation": 1.0, "bf_tf_adj_occupation": 1.0}];
     </script>
 
 
 
     <script>
-        splink_settings_from_splink = {"probability_two_random_records_match": 0.00013582694460587586, "link_type": "dedupe_only", "blocking_rules_to_generate_predictions": ["l.first_name = r.first_name", "l.surname = r.surname"], "comparisons": [{"output_column_name": "first_name", "comparison_levels": [{"sql_condition": "\"first_name_l\" IS NULL OR \"first_name_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"first_name_l\" = \"first_name_r\"", "label_for_charts": "Exact match", "u_probability": 0.013502398903358465, "tf_adjustment_column": "first_name", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.004496418075807224}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.021869924042551194}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9601312589782831}], "comparison_description": "Exact match vs. First_Name within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "surname", "comparison_levels": [{"sql_condition": "\"surname_l\" IS NULL OR \"surname_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"surname_l\" = \"surname_r\"", "label_for_charts": "Exact match", "u_probability": 0.0006829111400430454, "tf_adjustment_column": "surname", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.0005551406686801531}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.01743185758438909}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9813300906068877}], "comparison_description": "Exact match vs. Surname within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "dob", "comparison_levels": [{"sql_condition": "\"dob_l\" IS NULL OR \"dob_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"dob_l\" = \"dob_r\"", "label_for_charts": "Exact match", "u_probability": 0.0019264516379695524, "tf_adjustment_column": "dob", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 1", "label_for_charts": "Levenshtein <= 1", "u_probability": 0.019186810767407678}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.07288300772523296}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9060037298693898}], "comparison_description": "Exact match vs. Dob within levenshtein thresholds 1, 2 vs. anything else"}, {"output_column_name": "postcode_fake", "comparison_levels": [{"sql_condition": "\"postcode_fake_l\" IS NULL OR \"postcode_fake_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"postcode_fake_l\" = \"postcode_fake_r\"", "label_for_charts": "Exact match", "u_probability": 0.00016906715186255645, "tf_adjustment_column": "postcode_fake", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"postcode_fake_l\", \"postcode_fake_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.0004733880252151581}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9993575448229223}], "comparison_description": "Exact match vs. Postcode_Fake within levenshtein threshold 2 vs. anything else"}, {"output_column_name": "birth_place", "comparison_levels": [{"sql_condition": "\"birth_place_l\" IS NULL OR \"birth_place_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"birth_place_l\" = \"birth_place_r\"", "label_for_charts": "Exact match", "u_probability": 0.004354448176208701, "tf_adjustment_column": "birth_place", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9956455518237913}], "comparison_description": "Exact match vs. anything else"}, {"output_column_name": "occupation", "comparison_levels": [{"sql_condition": "\"occupation_l\" IS NULL OR \"occupation_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"occupation_l\" = \"occupation_r\"", "label_for_charts": "Exact match", "u_probability": 0.03694787905314221, "tf_adjustment_column": "occupation", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9630521209468578}], "comparison_description": "Exact match vs. anything else"}], "retain_matching_columns": true, "retain_intermediate_calculation_columns": true, "max_iterations": 10, "em_convergence": 0.01, "sql_dialect": "duckdb", "linker_uid": "Cfa94oRW"};
+        splink_settings_from_splink = {"probability_two_random_records_match": 0.00013582694460587586, "link_type": "dedupe_only", "blocking_rules_to_generate_predictions": ["l.first_name = r.first_name", "l.surname = r.surname"], "comparisons": [{"output_column_name": "first_name", "comparison_levels": [{"sql_condition": "\"first_name_l\" IS NULL OR \"first_name_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"first_name_l\" = \"first_name_r\"", "label_for_charts": "Exact match", "u_probability": 0.013068214636400392, "tf_adjustment_column": "first_name", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.004207201854923221}, {"sql_condition": "jaro_winkler_similarity(\"first_name_l\", \"first_name_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.022218027741333926}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9605065557673425}], "comparison_description": "Exact match vs. First_Name within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "surname", "comparison_levels": [{"sql_condition": "\"surname_l\" IS NULL OR \"surname_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"surname_l\" = \"surname_r\"", "label_for_charts": "Exact match", "u_probability": 0.0006786566725669734, "tf_adjustment_column": "surname", "tf_adjustment_weight": 1.0}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.9", "label_for_charts": "Jaro_winkler_similarity >= 0.9", "u_probability": 0.0005548230757837331}, {"sql_condition": "jaro_winkler_similarity(\"surname_l\", \"surname_r\") >= 0.7", "label_for_charts": "Jaro_winkler_similarity >= 0.7", "u_probability": 0.01766207025492724}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9811044499967221}], "comparison_description": "Exact match vs. Surname within jaro_winkler_similarity thresholds 0.9, 0.7 vs. anything else"}, {"output_column_name": "dob", "comparison_levels": [{"sql_condition": "\"dob_l\" IS NULL OR \"dob_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"dob_l\" = \"dob_r\"", "label_for_charts": "Exact match", "u_probability": 0.00198692131133342, "tf_adjustment_column": "dob", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 1", "label_for_charts": "Levenshtein <= 1", "u_probability": 0.01926291628773115}, {"sql_condition": "levenshtein(\"dob_l\", \"dob_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.07120176692217747}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.907548395478758}], "comparison_description": "Exact match vs. Dob within levenshtein thresholds 1, 2 vs. anything else"}, {"output_column_name": "postcode_fake", "comparison_levels": [{"sql_condition": "\"postcode_fake_l\" IS NULL OR \"postcode_fake_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"postcode_fake_l\" = \"postcode_fake_r\"", "label_for_charts": "Exact match", "u_probability": 0.0001393592262775757, "tf_adjustment_column": "postcode_fake", "tf_adjustment_weight": 1.0}, {"sql_condition": "levenshtein(\"postcode_fake_l\", \"postcode_fake_r\") <= 2", "label_for_charts": "Levenshtein <= 2", "u_probability": 0.0005173711275554998}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9993432696461669}], "comparison_description": "Exact match vs. Postcode_Fake within levenshtein threshold 2 vs. anything else"}, {"output_column_name": "birth_place", "comparison_levels": [{"sql_condition": "\"birth_place_l\" IS NULL OR \"birth_place_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"birth_place_l\" = \"birth_place_r\"", "label_for_charts": "Exact match", "u_probability": 0.006338878679304211, "tf_adjustment_column": "birth_place", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9936611213206958}], "comparison_description": "Exact match vs. anything else"}, {"output_column_name": "occupation", "comparison_levels": [{"sql_condition": "\"occupation_l\" IS NULL OR \"occupation_r\" IS NULL", "label_for_charts": "Null", "is_null_level": true}, {"sql_condition": "\"occupation_l\" = \"occupation_r\"", "label_for_charts": "Exact match", "u_probability": 0.041017560591296416, "tf_adjustment_column": "occupation", "tf_adjustment_weight": 1.0}, {"sql_condition": "ELSE", "label_for_charts": "All other comparisons", "u_probability": 0.9589824394087035}], "comparison_description": "Exact match vs. anything else"}], "retain_matching_columns": true, "retain_intermediate_calculation_columns": true, "max_iterations": 10, "em_convergence": 0.01, "sql_dialect": "duckdb", "linker_uid": "3ok9gDcB"};
     </script>
 
 
@@ -380,7 +386,7 @@
  * ---
  *
  * Name: 0420fc5db15e44ab
- * Version: 2711.0.0
+ * Version: 2943.0.0
  * License: null
  * Private: false
  * Homepage: https://observablehq.com/d/0420fc5db15e44ab
@@ -5880,6 +5886,21 @@
 
   const checkbox = createCheckbox(true, "checkbox");
 
+  function toggle({label, value, values, disabled} = {}) {
+    const input = html$1`<input class=__ns__-input type=checkbox name=input disabled=${disabled}>`;
+    const form = html$1`<form class="__ns__ __ns__-toggle">${maybeLabel(label, input)}${input}`;
+    Object.defineProperty(form, "value", {
+      get() {
+        return values === undefined ? input.checked : values[input.checked ? 0 : 1];
+      },
+      set(v) {
+        input.checked = values === undefined ? !!v : v === values[0];
+      }
+    });
+    if (value !== undefined) form.value = value;
+    return form;
+  }
+
   // The input is undefined if there are no options, or an individual input
   // element if there is only one; we want these two cases to behave the same as
   // when there are two or more options, i.e., a RadioNodeList.
@@ -8186,7 +8207,7 @@
     {
       match_weight: 11.543499994820714,
       match_probability: 0.9996651002856178,
-      source_dataset_l: "_b",
+      source_dataset_l: "_a",
       source_dataset_r: "_a",
       unique_id_l: 84,
       unique_id_r: 79,
@@ -8401,7 +8422,7 @@
   ]
   )}
 
-  function _splink_settings_from_splink()
+  function _default_splink_settings()
   {
     return {
       probability_two_random_records_match: 0.01,
@@ -8595,10 +8616,6 @@
   }
 
 
-  function _in_csv(){return(
-  null
-  )}
-
   function _in_settings(){return(
   null
   )}
@@ -8616,7 +8633,7 @@
 `
   )}
 
-  function _draw_header(slt,original_row,d3,colspan_spec,styling_lookup){return(
+  function _draw_header(slt,original_row,d3,colspan_spec,splink_scores_filter,styling_lookup){return(
   function (table_element, data_with_inputs_clone, cols) {
     // Draw the two table header rows
     let orig_row_clone = slt.cloneDeep(original_row);
@@ -8647,7 +8664,9 @@
       .selectAll("th")
       .data(cols)
       .enter()
+      .filter((d) => splink_scores_filter({ _key: d }))
       .append("th")
+
       .attr(
         "class",
         (d, i) =>
@@ -8678,7 +8697,7 @@
         jw = match_prob_number_format(jw);
 
         let diff_view;
-        console.log("HII");
+
         if (lev > 0) {
           diff_view = insert_del_differences(comparison_value, original_value);
         } else {
@@ -8713,7 +8732,7 @@
   }
   )}
 
-  function _draw_original_row(slt,original_row,match_prob_number_format,styling_lookup){return(
+  function _draw_original_row(slt,original_row,match_prob_number_format,splink_scores_filter,styling_lookup){return(
   function (table) {
     // Draw the top yellow highlighted row
     let first_cols = { clerical_match_score: null, notes_input: null };
@@ -8741,11 +8760,14 @@
 
     table_original_row
       .selectAll("td")
-      .data((d) => Object.entries(d))
+      .data((d) =>
+        Object.entries(d).filter((entry) =>
+          splink_scores_filter({ _key: entry[0] })
+        )
+      )
       .join("td")
       .text((d) => d[1])
       .attr("class", (d, i) => {
-        debugger;
         let this_class = `${styling_lookup[i].css_class} original_record_cell col_${d[0]}`;
         if (i == 2) {
           this_class += " orig_record_text_with_arrow_cell";
@@ -8757,7 +8779,7 @@
 
   function _draw_potential_matches_spacer_row(){return(
   function (table) {
-    let pm_data = [["Potential matches👇", "", ""]];
+    let pm_data = [["👇 Potential matches", "", ""]];
     const potential_matches_spacer_row = table
       .selectAll("tr.potential_matches_spacer_row")
       .data(pm_data)
@@ -8852,25 +8874,36 @@
 `
   )}
 
-  function _colspan_spec(){return(
-  [
-    {
-      span: 2,
-      text: "User input",
-      css_class: "user_input_column"
-    },
-    {
-      span: 2,
-      text: "Splink predictions",
-      css_class: "splink_predictions_column"
-    },
-    {
+  function _colspan_spec(show_splink_predictions_in_interface)
+  {
+    let spec = [
+      {
+        span: 2,
+        text: "User input",
+        css_class: "user_input_column"
+      }
+    ];
+
+    let splink_predictions = show_splink_predictions_in_interface.includes(
+      "Show splink predictions"
+    );
+
+    if (splink_predictions) {
+      spec.push({
+        span: 2,
+        text: "Splink predictions",
+        css_class: "splink_predictions_column"
+      });
+    }
+
+    spec.push({
       span: 100,
       text: "Source data",
       css_class: "source_data_column"
-    }
-  ]
-  )}
+    });
+    return spec;
+  }
+
 
   function _styling_lookup(colspan_spec)
   {
@@ -8890,13 +8923,33 @@
   }
 
 
-  function _styles(html){return(
-  html`
+  function _styles(html)
+  {
+    // return html`
+    // <style>
+    // #main-interface-table{
+    //   border: 1px solid black !important;
+
+    // }
+    // #main-interface-table tr td{
+    //   border: 1px solid black !important;
+    // min-width:40px;
+
+    // }
+    // </style>`;
+
+    return html`
 
 <style>
 
 body {
   font-family: 'Open Sans Pro', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background-color: white;
+  justify-content: center;
+
+
 }
 
 h1 {
@@ -8905,9 +8958,8 @@ h1 {
   font-size: 2.0em;
   text-transform: none;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
   
@@ -8921,6 +8973,7 @@ table#main-interface-table {
   border-collapse: collapse;
   overflow: scroll;
   color: #444;
+  margin-bottom: 20px;
 }
 
 #main-interface-table td:first-child {
@@ -9058,7 +9111,8 @@ details p {
 
 /* Download button */
 #observablehq-dl {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-radius: 8px;
 
   background-color: #ffffff;
@@ -9069,8 +9123,58 @@ details p {
 }
 
 
-</style>`
+</style>`;
+  }
+
+
+  function _show_splink_predictions_in_interface(slt){return(
+  slt.checkbox(
+    ["Show splink predictions"],
+    {
+      value: ["Show splink predictions"]
+    }
+  )
   )}
+
+  function _existing_labels_csv(html,slt,Event)
+  {
+    const el = html``;
+
+    const button = html`  <label>
+    Import existing labels for editing:
+    <input type="file">
+  </label>`;
+    el.appendChild(button);
+    el.value = null;
+
+    function readFileAsText(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(reader.error);
+        reader.readAsText(file);
+      });
+    }
+
+    // Add an event listener for the "change" event on the button
+    button.addEventListener("change", async (event) => {
+      // Get the selected file
+      const file = event.target.files.item(0);
+
+      try {
+        // Read the file contents as ArrayBuffer
+        const fileData = await readFileAsText(file);
+
+        el.value = slt.d3.csvParse(fileData);
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+      } catch (error) {
+        console.error("Error reading file:", error);
+      }
+    });
+
+    return el;
+  }
+
 
   function _checkboxes(slt){return(
   slt.checkbox(["Enable cell shading", "Enable diff view"], {
@@ -9123,13 +9227,25 @@ details p {
   }
 
 
-  function _dl(DOM,slt,output_data){return(
+  function _dl(DOM,slt,output_data,output_filename){return(
   DOM.download(
     new Blob([slt.d3.csvFormat(output_data)], { type: "text/csv" }),
-    "labels.csv",
-    "⬇️ Download labels in csv format"
+    output_filename,
+    "⬇️ Download labels in .csv format"
   )
   )}
+
+  function _copy_to_clipboard_button(html,slt,output_data)
+  {
+    const button = html`<button>📋 Copy labels to clipboard in .csv format</button>`;
+    button.onclick = () => {
+      const csvData = slt.d3.csvFormat(output_data);
+      window.navigator.clipboard.writeText(csvData);
+    };
+
+    return button;
+  }
+
 
   function _tooltip(slt){return(
   slt.d3
@@ -9139,7 +9255,7 @@ details p {
     .style("z-index", "10")
   )}
 
-  function _22(md){return(
+  function _24(md){return(
   md`### Styling`
   )}
 
@@ -9287,13 +9403,14 @@ details p {
   }
   )}
 
-  function _table_cells_d3_data_mapper(){return(
+  function _table_cells_d3_data_mapper(splink_scores_filter){return(
   function (row_data) {
     // Transform the row into an array of values
     // one for each cell.
     // The values are themselves dictionaries, so that the
     // cell can be aware of not only its value, but also e.g. the row id
     let cell_data = Object.entries(row_data);
+
     let uid_col = "unique_id";
 
     cell_data = cell_data.map((entry) => {
@@ -9309,6 +9426,8 @@ details p {
     });
 
     cell_data = cell_data.filter((d) => d["_key"] != "_row_num");
+
+    cell_data = cell_data.filter((entry) => splink_scores_filter(entry));
 
     return cell_data;
   }
@@ -9335,15 +9454,15 @@ details p {
   }
   )}
 
-  function _27(md){return(
+  function _29(md){return(
   md`## Dataflow`
   )}
 
-  function _splink_settings(globalThis,default_pairwise_comparison_data)
+  function _splink_settings(globalThis,default_splink_settings)
   {
     let ss;
     if (typeof globalThis.splink_settings_from_splink == "undefined") {
-      ss = default_pairwise_comparison_data;
+      ss = default_splink_settings;
     } else {
       ss = globalThis.splink_settings_from_splink;
     }
@@ -9365,7 +9484,7 @@ details p {
   }
 
 
-  function _pairwise_comparison_data_formatted(pairwise_comparison_data,match_prob_number_format,is_self_match)
+  function _pairwise_comparison_data_formatted(pairwise_comparison_data,match_prob_number_format,is_self_match,splink_settings,has_same_source_dataset)
   {
     let formatted_data = pairwise_comparison_data.map((d) => {
       return Object.assign({}, d);
@@ -9379,8 +9498,11 @@ details p {
       d["match_probability"] = match_prob_number_format(d["match_probability"]);
     });
 
-    // Apply the filter function to formatted_data
     formatted_data = formatted_data.filter((d) => !is_self_match(d));
+
+    if (splink_settings.link_type == "link_only") {
+      formatted_data = formatted_data.filter((d) => !has_same_source_dataset(d));
+    }
 
     return formatted_data;
   }
@@ -9406,18 +9528,35 @@ details p {
   }
 
 
-  function _data_with_inputs(potential_matches_data,slt)
+  function _data_with_inputs(potential_matches_data,existing_labels_csv,has_existing_label,slt)
   {
-    let new_data = potential_matches_data.map((d, i) => {
+    let new_data = potential_matches_data.map((pairwise_comparison, i) => {
+      let match_score = 0.0;
+      let notes_value = "";
+
+      if (existing_labels_csv != null) {
+        // Check if thre is a row in existing_labels_csv
+        // which matches d[source_dataest_]
+
+        existing_labels_csv.forEach((existing_label) => {
+          if (has_existing_label(existing_label, pairwise_comparison)) {
+            debugger;
+            match_score = existing_label["clerical_match_score"];
+            notes_value = existing_label["notes"];
+          }
+        });
+      }
+
+      // Look up if exists in existing labels
       var clone = Object.assign(
         {
           clerical_match_score: slt.range([0, 1], {
-            value: 0,
+            value: match_score,
             step: 0.01
           }),
-          notes_input: slt.textarea({ value: "" })
+          notes_input: slt.textarea({ value: notes_value })
         },
-        d
+        pairwise_comparison
       );
       clone["_row_num"] = i;
 
@@ -9428,29 +9567,52 @@ details p {
   }
 
 
-  function _output_data(table_interface,original_row)
+  function _output_data(table_interface,has_source_dataset_column,source_dataset_column_name,original_row,unique_id_column_name)
   {
     const outputs = Object.keys(table_interface).map((key) => {
       const data = table_interface[key];
-      return {
-        unique_id_l: original_row.unique_id,
-        unique_id_r: data.unique_id,
-        match_probability: data.match_probability,
-        match_weight: data.match_weight,
-        clerical_match_score: data.clerical_match_score_value,
-        notes_input_value: data.notes_input_value
-      };
+
+      if (has_source_dataset_column) {
+        return {
+          [`${source_dataset_column_name}_l`]:
+            original_row[source_dataset_column_name],
+          [`${unique_id_column_name}_l`]: original_row[unique_id_column_name],
+          [`${source_dataset_column_name}_r`]: data[source_dataset_column_name],
+          [`${unique_id_column_name}_r`]: data[unique_id_column_name],
+          match_probability: data.match_probability,
+          match_weight: data.match_weight,
+          clerical_match_score: data.clerical_match_score_value,
+          notes_input_value: data.notes_input_value
+        };
+      } else {
+        return {
+          [`${unique_id_column_name}_l`]: original_row[unique_id_column_name],
+          [`${unique_id_column_name}_r`]: data[unique_id_column_name],
+          match_probability: data.match_probability,
+          match_weight: data.match_weight,
+          clerical_match_score: data.clerical_match_score_value,
+          notes_input_value: data.notes_input_value
+        };
+      }
     });
     return outputs;
   }
 
 
-  function _35(md){return(
-  md`## Default data`
-  )}
+  function _output_filename(source_dataset_column_name,original_row,unique_id_column_name)
+  {
+    const sourceDatasetColumnExists = source_dataset_column_name in original_row;
 
-  function _36(md){return(
-  md`## Derived constants `
+    if (sourceDatasetColumnExists) {
+      return `labels_${original_row[source_dataset_column_name]}_${original_row[unique_id_column_name]}.csv`;
+    } else {
+      return `labels_${original_row[unique_id_column_name]}.csv`;
+    }
+  }
+
+
+  function _38(md){return(
+  md`## Constants`
   )}
 
   function _comparison_records_suffix(get_suffix_of_comparison_records_l_or_r,pairwise_comparison_data,unique_id_column_name){return(
@@ -9507,34 +9669,55 @@ details p {
   }
 
 
-  function _43(md){return(
+  function _has_source_dataset_column(pairwise_comparison_data,source_dataset_column_name)
+  {
+    let example_row = pairwise_comparison_data[0];
+
+    return `${source_dataset_column_name}_l` in example_row;
+  }
+
+
+  function _46(md){return(
   md`## Pure functions`
   )}
 
-  function _is_self_match(pairwise_comparison_data,source_dataset_column_name,unique_id_column_name){return(
+  function _is_self_match(has_source_dataset_column,source_dataset_column_name,unique_id_column_name){return(
   function (record) {
     // Since splink uses `linker.find_matches_to_new_records` under the hood, and this method
     // assumes it's a new, not an existing record, we need to filter out the 'self match'
 
-    let example_row = pairwise_comparison_data[0];
-
-    // Check if source_dataset_column_name is a key in the firstComparisonRow
-    const sourceDatasetColumnExists = source_dataset_column_name in example_row;
-
-    if (sourceDatasetColumnExists) {
+    if (has_source_dataset_column) {
       // Filter out records with both source_dataset_column_name and unique_id_column_name equal to those in the example_row
       return (
         record[`${source_dataset_column_name}_l`] ==
           record[`${source_dataset_column_name}_r`] &&
         record[`${unique_id_column_name}_l`] ==
-          example_row[`${unique_id_column_name}_r`]
+          record[`${unique_id_column_name}_r`]
       );
     } else {
       // Filter out records with unique_id_column_name equal to that in the example_row
       return (
         record[`${unique_id_column_name}_l`] ==
-        example_row[`${unique_id_column_name}_r`]
+        record[`${unique_id_column_name}_r`]
       );
+    }
+  }
+  )}
+
+  function _has_same_source_dataset(pairwise_comparison_data,source_dataset_column_name){return(
+  function (record) {
+    let example_row = pairwise_comparison_data[0];
+
+    const sourceDatasetColumnExists =
+      `${source_dataset_column_name}_l` in example_row;
+
+    if (sourceDatasetColumnExists) {
+      return (
+        record[`${source_dataset_column_name}_l`] ==
+        record[`${source_dataset_column_name}_r`]
+      );
+    } else {
+      return true;
     }
   }
   )}
@@ -9553,6 +9736,62 @@ details p {
     output_columns.unshift("match_probability");
     output_columns.unshift("match_weight");
     return output_columns;
+  }
+  )}
+
+  function _has_existing_label(has_source_dataset_column,original_row,source_dataset_column_name,unique_id_column_name){return(
+  function (label_pairwise_comparison, comparison_record) {
+    let original_row_id;
+    let comparison_record_id;
+    let pw_comparison_id_l;
+    let pw_comparison_id_r;
+
+    if (has_source_dataset_column) {
+      original_row_id =
+        original_row[source_dataset_column_name] +
+        "_" +
+        original_row[unique_id_column_name];
+      comparison_record_id =
+        comparison_record[source_dataset_column_name] +
+        "_" +
+        comparison_record[unique_id_column_name];
+      pw_comparison_id_l =
+        label_pairwise_comparison[`${source_dataset_column_name}_l`] +
+        "_" +
+        label_pairwise_comparison[`${unique_id_column_name}_l`];
+      pw_comparison_id_r =
+        label_pairwise_comparison[`${source_dataset_column_name}_r`] +
+        "_" +
+        label_pairwise_comparison[`${unique_id_column_name}_r`];
+    } else {
+      original_row_id = original_row[unique_id_column_name];
+      comparison_record_id = comparison_record[unique_id_column_name];
+      pw_comparison_id_l =
+        label_pairwise_comparison[`${unique_id_column_name}_l`];
+      pw_comparison_id_r =
+        label_pairwise_comparison[`${unique_id_column_name}_r`];
+    }
+
+    return (
+      (original_row_id == pw_comparison_id_l &&
+        comparison_record_id == pw_comparison_id_r) ||
+      (original_row_id == pw_comparison_id_r &&
+        comparison_record_id == pw_comparison_id_l)
+    );
+  }
+  )}
+
+  function _splink_scores_filter(show_splink_predictions_in_interface){return(
+  function (data) {
+    let show_splink_scores = show_splink_predictions_in_interface.includes(
+      "Show splink predictions"
+    );
+
+    if (show_splink_scores) {
+      return true;
+    } else {
+      return !["match_probability", "match_weight"].includes(data._key);
+    }
   }
   )}
 
@@ -9629,7 +9868,7 @@ details p {
 
   function _get_original_record(is_self_match,transform_pairwise_comparison_to_label_format){return(
   function (find_matches_data, suffix, unique_id_colname) {
-    debugger;
+    
     let first_record = find_matches_data.filter((d) => is_self_match(d))[0];
     return transform_pairwise_comparison_to_label_format(
       first_record,
@@ -9814,7 +10053,7 @@ details p {
   }
   )}
 
-  function _54(md){return(
+  function _60(md){return(
   md`### Formatting`
   )}
 
@@ -9845,7 +10084,7 @@ details p {
     .range(["white", "rgb(143, 200, 255)", "dodgerblue"])
   )}
 
-  function _59(md){return(
+  function _65(md){return(
   md`## Constants`
   )}
 
@@ -9865,7 +10104,7 @@ details p {
   }
 
 
-  function _63(md){return(
+  function _69(md){return(
   md`## Embedding things
 `
   )}
@@ -9874,7 +10113,7 @@ details p {
   "http://127.0.0.1:8080/dist/slt.js"
   )}
 
-  function _65(md){return(
+  function _71(md){return(
   md`## TODO:
 
 
@@ -9886,52 +10125,60 @@ details p {
     const main = runtime.module();
     main.variable(observer()).define(["md"], _1);
     main.variable(observer("default_pairwise_comparison_data")).define("default_pairwise_comparison_data", _default_pairwise_comparison_data);
-    main.variable(observer("splink_settings_from_splink")).define("splink_settings_from_splink", _splink_settings_from_splink);
+    main.variable(observer("default_splink_settings")).define("default_splink_settings", _default_splink_settings);
     main.variable(observer("viewof refresh")).define("viewof refresh", ["Inputs"], _refresh);
     main.variable(observer("refresh")).define("refresh", ["Generators", "viewof refresh"], (G, _) => G.input(_));
     main.variable(observer("slt")).define("slt", ["globalThis","require","localUrl","refresh"], _slt);
-    main.variable(observer("in_csv")).define("in_csv", _in_csv);
     main.variable(observer("in_settings")).define("in_settings", _in_settings);
     main.variable(observer("blurb")).define("blurb", ["html"], _blurb);
-    main.variable(observer("draw_header")).define("draw_header", ["slt","original_row","d3","colspan_spec","styling_lookup"], _draw_header);
+    main.variable(observer("draw_header")).define("draw_header", ["slt","original_row","d3","colspan_spec","splink_scores_filter","styling_lookup"], _draw_header);
     main.variable(observer("render_tooltip_contents")).define("render_tooltip_contents", ["original_row","leven","jaro_winkler_distance","match_prob_number_format","insert_del_differences"], _render_tooltip_contents);
-    main.variable(observer("draw_original_row")).define("draw_original_row", ["slt","original_row","match_prob_number_format","styling_lookup"], _draw_original_row);
+    main.variable(observer("draw_original_row")).define("draw_original_row", ["slt","original_row","match_prob_number_format","splink_scores_filter","styling_lookup"], _draw_original_row);
     main.variable(observer("draw_potential_matches_spacer_row")).define("draw_potential_matches_spacer_row", _draw_potential_matches_spacer_row);
     main.variable(observer("draw_potential_matches_rows")).define("draw_potential_matches_rows", ["table_cells_d3_data_mapper","columns_to_highlight_similarity","styling_lookup","HTMLElement","form_oninput_update_value","redraw_potential_match_cells","slt","render_tooltip_contents","tooltip"], _draw_potential_matches_rows);
     main.variable(observer("fonts")).define("fonts", ["html"], _fonts);
-    main.variable(observer("colspan_spec")).define("colspan_spec", _colspan_spec);
+    main.variable(observer("colspan_spec")).define("colspan_spec", ["show_splink_predictions_in_interface"], _colspan_spec);
     main.variable(observer("styling_lookup")).define("styling_lookup", ["colspan_spec"], _styling_lookup);
     main.variable(observer("styles")).define("styles", ["html"], _styles);
+    main.variable(observer("viewof show_splink_predictions_in_interface")).define("viewof show_splink_predictions_in_interface", ["slt"], _show_splink_predictions_in_interface);
+    main.variable(observer("show_splink_predictions_in_interface")).define("show_splink_predictions_in_interface", ["Generators", "viewof show_splink_predictions_in_interface"], (G, _) => G.input(_));
+    main.variable(observer("viewof existing_labels_csv")).define("viewof existing_labels_csv", ["html","slt","Event"], _existing_labels_csv);
+    main.variable(observer("existing_labels_csv")).define("existing_labels_csv", ["Generators", "viewof existing_labels_csv"], (G, _) => G.input(_));
     main.variable(observer("viewof checkboxes")).define("viewof checkboxes", ["slt"], _checkboxes);
     main.variable(observer("checkboxes")).define("checkboxes", ["Generators", "viewof checkboxes"], (G, _) => G.input(_));
     main.variable(observer("viewof table_interface")).define("viewof table_interface", ["slt","data_with_inputs","unique_id_column_name","draw_header","draw_original_row","draw_potential_matches_spacer_row","draw_potential_matches_rows","Event"], _table_interface);
     main.variable(observer("table_interface")).define("table_interface", ["Generators", "viewof table_interface"], (G, _) => G.input(_));
-    main.variable(observer("dl")).define("dl", ["DOM","slt","output_data"], _dl);
+    main.variable(observer("dl")).define("dl", ["DOM","slt","output_data","output_filename"], _dl);
+    main.variable(observer("copy_to_clipboard_button")).define("copy_to_clipboard_button", ["html","slt","output_data"], _copy_to_clipboard_button);
     main.variable(observer("tooltip")).define("tooltip", ["slt"], _tooltip);
-    main.variable(observer()).define(["md"], _22);
+    main.variable(observer()).define(["md"], _24);
     main.variable(observer("shade_potential_match_cells")).define("shade_potential_match_cells", ["original_row","white_green_colour_scale","columns_to_highlight_similarity","leven","white_blue_colour_scale","transitive_highlight_width","padding_with_highlight"], _shade_potential_match_cells);
     main.variable(observer("redraw_potential_match_cells")).define("redraw_potential_match_cells", ["table_cells_d3_data_mapper","checkboxes","columns_to_highlight_similarity","original_row","insert_del_differences","slt","shade_potential_match_cells"], _redraw_potential_match_cells);
-    main.variable(observer("table_cells_d3_data_mapper")).define("table_cells_d3_data_mapper", _table_cells_d3_data_mapper);
+    main.variable(observer("table_cells_d3_data_mapper")).define("table_cells_d3_data_mapper", ["splink_scores_filter"], _table_cells_d3_data_mapper);
     main.variable(observer("form_oninput_update_value")).define("form_oninput_update_value", ["Event"], _form_oninput_update_value);
-    main.variable(observer()).define(["md"], _27);
-    main.variable(observer("splink_settings")).define("splink_settings", ["globalThis","default_pairwise_comparison_data"], _splink_settings);
+    main.variable(observer()).define(["md"], _29);
+    main.variable(observer("splink_settings")).define("splink_settings", ["globalThis","default_splink_settings"], _splink_settings);
     main.variable(observer("pairwise_comparison_data")).define("pairwise_comparison_data", ["globalThis","default_pairwise_comparison_data"], _pairwise_comparison_data);
-    main.variable(observer("pairwise_comparison_data_formatted")).define("pairwise_comparison_data_formatted", ["pairwise_comparison_data","match_prob_number_format","is_self_match"], _pairwise_comparison_data_formatted);
+    main.variable(observer("pairwise_comparison_data_formatted")).define("pairwise_comparison_data_formatted", ["pairwise_comparison_data","match_prob_number_format","is_self_match","splink_settings","has_same_source_dataset"], _pairwise_comparison_data_formatted);
     main.variable(observer("original_row")).define("original_row", ["get_original_record","pairwise_comparison_data","original_record_suffix","unique_id_column_name"], _original_row);
     main.variable(observer("potential_matches_data")).define("potential_matches_data", ["get_potential_matches","pairwise_comparison_data_formatted","comparison_records_suffix","unique_id_column_name"], _potential_matches_data);
-    main.variable(observer("data_with_inputs")).define("data_with_inputs", ["potential_matches_data","slt"], _data_with_inputs);
-    main.variable(observer("output_data")).define("output_data", ["table_interface","original_row"], _output_data);
-    main.variable(observer()).define(["md"], _35);
-    main.variable(observer()).define(["md"], _36);
+    main.variable(observer("data_with_inputs")).define("data_with_inputs", ["potential_matches_data","existing_labels_csv","has_existing_label","slt"], _data_with_inputs);
+    main.variable(observer("output_data")).define("output_data", ["table_interface","has_source_dataset_column","source_dataset_column_name","original_row","unique_id_column_name"], _output_data);
+    main.variable(observer("output_filename")).define("output_filename", ["source_dataset_column_name","original_row","unique_id_column_name"], _output_filename);
+    main.variable(observer()).define(["md"], _38);
     main.variable(observer("comparison_records_suffix")).define("comparison_records_suffix", ["get_suffix_of_comparison_records_l_or_r","pairwise_comparison_data","unique_id_column_name"], _comparison_records_suffix);
     main.variable(observer("original_record_suffix")).define("original_record_suffix", ["get_suffix_of_original_record_l_or_r","pairwise_comparison_data","unique_id_column_name"], _original_record_suffix);
     main.variable(observer("unique_id_column_name")).define("unique_id_column_name", ["splink_settings"], _unique_id_column_name);
     main.variable(observer("source_dataset_column_name")).define("source_dataset_column_name", ["splink_settings"], _source_dataset_column_name);
     main.variable(observer("columns_to_highlight_similarity")).define("columns_to_highlight_similarity", ["unique_id_column_name","source_dataset_column_name","additional_columns_to_retain","pairwise_comparison_data"], _columns_to_highlight_similarity);
     main.variable(observer("additional_columns_to_retain")).define("additional_columns_to_retain", ["splink_settings"], _additional_columns_to_retain);
-    main.variable(observer()).define(["md"], _43);
-    main.variable(observer("is_self_match")).define("is_self_match", ["pairwise_comparison_data","source_dataset_column_name","unique_id_column_name"], _is_self_match);
+    main.variable(observer("has_source_dataset_column")).define("has_source_dataset_column", ["pairwise_comparison_data","source_dataset_column_name"], _has_source_dataset_column);
+    main.variable(observer()).define(["md"], _46);
+    main.variable(observer("is_self_match")).define("is_self_match", ["has_source_dataset_column","source_dataset_column_name","unique_id_column_name"], _is_self_match);
+    main.variable(observer("has_same_source_dataset")).define("has_same_source_dataset", ["pairwise_comparison_data","source_dataset_column_name"], _has_same_source_dataset);
     main.variable(observer("get_output_columns")).define("get_output_columns", _get_output_columns);
+    main.variable(observer("has_existing_label")).define("has_existing_label", ["has_source_dataset_column","original_row","source_dataset_column_name","unique_id_column_name"], _has_existing_label);
+    main.variable(observer("splink_scores_filter")).define("splink_scores_filter", ["show_splink_predictions_in_interface"], _splink_scores_filter);
     main.variable(observer("get_suffix_of_original_record_l_or_r")).define("get_suffix_of_original_record_l_or_r", _get_suffix_of_original_record_l_or_r);
     main.variable(observer("get_suffix_of_comparison_records_l_or_r")).define("get_suffix_of_comparison_records_l_or_r", ["get_suffix_of_original_record_l_or_r"], _get_suffix_of_comparison_records_l_or_r);
     main.variable(observer("transform_pairwise_comparison_to_label_format")).define("transform_pairwise_comparison_to_label_format", _transform_pairwise_comparison_to_label_format);
@@ -9940,18 +10187,18 @@ details p {
     main.variable(observer("leven")).define("leven", _leven);
     main.variable(observer("jaro_winkler_distance")).define("jaro_winkler_distance", ["slt"], _jaro_winkler_distance);
     main.variable(observer("insert_del_differences")).define("insert_del_differences", ["slt"], _insert_del_differences);
-    main.variable(observer()).define(["md"], _54);
+    main.variable(observer()).define(["md"], _60);
     main.variable(observer("match_prob_number_format")).define("match_prob_number_format", _match_prob_number_format);
     main.variable(observer("red_orange_green_colour_scale")).define("red_orange_green_colour_scale", ["slt"], _red_orange_green_colour_scale);
     main.variable(observer("white_green_colour_scale")).define("white_green_colour_scale", ["slt"], _white_green_colour_scale);
     main.variable(observer("white_blue_colour_scale")).define("white_blue_colour_scale", ["slt"], _white_blue_colour_scale);
-    main.variable(observer()).define(["md"], _59);
+    main.variable(observer()).define(["md"], _65);
     main.variable(observer("table_cell_padding")).define("table_cell_padding", _table_cell_padding);
     main.variable(observer("transitive_highlight_width")).define("transitive_highlight_width", _transitive_highlight_width);
     main.variable(observer("padding_with_highlight")).define("padding_with_highlight", ["table_cell_padding","transitive_highlight_width"], _padding_with_highlight);
-    main.variable(observer()).define(["md"], _63);
+    main.variable(observer()).define(["md"], _69);
     main.variable(observer("localUrl")).define("localUrl", _localUrl);
-    main.variable(observer()).define(["md"], _65);
+    main.variable(observer()).define(["md"], _71);
     return main;
   }
 
@@ -31066,6 +31313,7 @@ details p {
   exports.jw_distance = jaroWinkler;
   exports.range = range$3;
   exports.textarea = textarea;
+  exports.toggle = toggle;
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
@@ -31079,9 +31327,14 @@ details p {
 
         if (name === "styles") return new slt.Inspector(document.querySelector("#observablehq-styles"));
         if (name === "viewof checkboxes") return new slt.Inspector(document.querySelector("#observablehq-checkboxes"));
+        if (name === "viewof show_splink_predictions_in_interface") return new slt.Inspector(document.querySelector("#observablehq-show_splink_predictions_in_interface"));
         if (name === "viewof table_interface") return new slt.Inspector(document.querySelector("#observablehq-table-interface"));
+        if (name === "viewof existing_labels_csv") return new slt.Inspector(document.querySelector("#observablehq-existing_labels_csv"));
         if (name === "dl") return new slt.Inspector(document.querySelector("#observablehq-dl"));
+        if (name === "copy_to_clipboard_button") return new slt.Inspector(document.querySelector("#observablehq-copy_to_clipboard_button"));
         if (name === "blurb") return new slt.Inspector(document.querySelector("#observablehq-blurb"));
+
+
 
     })
 </script>
